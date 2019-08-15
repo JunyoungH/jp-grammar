@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href='https://junyoungh.github.io/jap-grammar'",
+    "deploy": "ng run jap-grammar:deploy --repo=https://github.com/JunyoungH/jap-grammar.git --name='JunyoungH' --email=kensiro5218@gmail.com --base-href='https://junyoungh.github.io/jap-grammar'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
