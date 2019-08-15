@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jap-grammar": {
+    "jp-grammar": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jap-grammar:build"
+            "browserTarget": "jp-grammar:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "jap-grammar:build:production"
+              "browserTarget": "jp-grammar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jap-grammar:build"
+            "browserTarget": "jp-grammar:build"
           }
         },
         "test": {
@@ -110,11 +110,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "jap-grammar:serve"
+            "devServerTarget": "jp-grammar:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "jap-grammar:serve:production"
+              "devServerTarget": "jp-grammar:serve:production"
             }
           }
         },
@@ -125,5 +125,5 @@
       }
     }
   },
-  "defaultProject": "jap-grammar"
+  "defaultProject": "jp-grammar"
 }

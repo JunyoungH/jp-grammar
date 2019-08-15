@@ -1,11 +1,11 @@
 {
-  "name": "jap-grammar",
+  "name": "jp-grammar",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href='https://junyoungh.github.io/jap-grammar'",
-    "deploy": "ng run jap-grammar:deploy --repo=https://github.com/JunyoungH/jap-grammar.git --name='JunyoungH' --email=kensiro5218@gmail.com --base-href='https://junyoungh.github.io/jap-grammar'",
+    "build": "ng build --prod --base-href https://junyoungh.github.io/jp-grammar/ && ngh --dir=dist/ --no-silent",
+    "deploy": "ng run jp-grammar:deploy --repo=https://github.com/JunyoungH/jp-grammar.git --name='JunyoungH' --email=kensiro5218@gmail.com --base-href='https://junyoungh.github.io/jp-grammar'",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
