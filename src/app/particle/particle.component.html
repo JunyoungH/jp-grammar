@@ -13,7 +13,7 @@
     become "The fish eats." simply by changing one particle.
 </div>
 
-<div fxLayout="row">
+<div fxLayout="row wrap">
     <button mat-flat-button style="margin-top: 20px" *ngFor="let content of contents; index as i" color="{{i == contentShow? 'primary': ''}}" (click)="selectContent(i)">{{content}}</button>
 </div>
 <div *ngIf="contentShow == 0">
