@@ -1,0 +1,76 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+
+
+<h1>助詞・じょし</h1>
+<h2>Defining grammatical functions with particles</h2>
+
+<div class="definition">
+    We want to now make good use of what we learned in the last lesson by associating a noun with
+    another noun. This is done with something called particles. Particles are one or more Hiragana
+    characters that attach to the end of a word to define the grammatical function of that word in the
+    sentence. Using the correct particles is very important because the meaning of a sentence can
+    completely change just by changing the particles. For example, the sentence "Eat fish." can
+    become "The fish eats." simply by changing one particle.
+</div>
+
+<div fxLayout="row">
+    <button mat-flat-button style="margin-top: 20px" *ngFor="let content of contents; index as i" color="{{i == contentShow? 'primary': ''}}" (click)="selectContent(i)">{{content}}</button>
+</div>
+<div *ngIf="contentShow == 0">
+    <h2 align="center">The 「は」topic particle</h2>
+    <h3>Vocabulary</h3>
+    <p class="definition">
+        1. 学⽣【がく・せい】- student <br>
+        2. うん- yes (casual) <br>
+        3. 明⽇【あした】- tomorrow <br>
+        4. ううん- no (casual) <br>
+        5. 今⽇【きょう】- today <br>
+        6. 試験【しけん】- exam <br>
+        <br>
+        The first particle we will learn is the topic particle. The topic particle identifies what it is that you're
+        talking about, essentially the topic of your sentence. Let's say a person says, "Not student." This
+        is a perfectly valid sentence in Japanese but it doesn't tell us much without knowing what the
+        person is talking about. The topic particle will allow us to express what our sentences are about.
+        The topic particle is the character 「は」. Now, while this character is normally pronounced as
+        /ha/, it is pronounced /wa/ only when it is being used as the topic particle.
+    </p>
+    <h3>Example 1</h3>
+    <p class="definition">
+        ボブ：アリスは学⽣？ <br>
+        Bob: Is Alice (you) student? <br>
+        アリス：うん、学⽣。 <br>
+        Alice: Yeah, (I) am. <br>
+        <br>
+        Here, Bob is indicating that his question is about Alice. Notice that once the topic is established,
+        Alice does not have to repeat the topic to answer the question about herself.
+    </p>
+    <h3>Example 2</h3>
+    <p class="definition">
+        ボブ：ジョンは明⽇？ <br>
+        Bob: John is tomorrow? <br>
+        アリス：ううん、明⽇じゃない。 <br>
+        Alice: No, not tomorrow. <br>
+        <br>
+        Since we have no context, we don't have enough information to make any sense of this conversation.
+        It obviously makes no sense for John to actually be tomorrow. Given a context, as
+        long as the sentence has something to do with John and tomorrow, it can mean anything. For
+        instance, they could be talking about when John is taking an exam.
+    </p>
+    <h3>Example 3</h3>
+    <p class="definition">
+        アリス：今⽇は試験だ。<br>
+        Alice: Today is exam. <br>
+        ボブ：ジョンは？ <br>
+        Bob: What about John? <br>
+        アリス：ジョンは明⽇。 <br>
+        Alice: John is tomorrow. (As for John, the exam is tomorrow.) <br>
+        <br>
+        The last example shows how generic the topic of a sentence is. A topic can be referring to
+        any action or object from anywhere even including other sentences. For example, in the last
+        sentence from the previous example, even though the sentence is about when the exam is for
+        John, the word "exam" doesn't appear anywhere in the sentence!
+        We'll see a more specific particle that ties more closely into the sentence at the end of this lesson
+        with the identifier particle.   
+    </p>
+</div>
+</div>
