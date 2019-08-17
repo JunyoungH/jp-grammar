@@ -1,0 +1,37 @@
+p {
+    max-width: 900px;
+    word-wrap: break-word;
+    word-spacing: normal;
+    white-space: pre-wrap;
+}
+
+h2 {
+    text-align: center;
+}
+
+.exception {
+    color: rgb(255, 22, 22);
+}
+
+
+.button-group-lg {
+    width: 100%;
+    justify-content: center;
+}
+
+.button-group-sm {
+    width: unset;
+} 
+
+@media (max-width: 740px) {
+    .button-group-sm {
+        width: 100%;
+    } 
+
+    .button-group-lg {
+        width: 100%;
+        justify-content: unset;
+        overflow: auto;
+    }
+    
+}

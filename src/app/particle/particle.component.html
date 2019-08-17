@@ -1,76 +1,805 @@
-<div fxLayout="column" fxLayoutAlign="center center">
+<div fxLayout="column" fxLayoutAlign="center center" [@fadeIn]>
 
 
-<h1>助詞・じょし</h1>
-<h2>Defining grammatical functions with particles</h2>
+    <h1>助詞・じょし</h1>
+    <h2>Defining grammatical functions with particles</h2>
 
-<div class="definition">
-    We want to now make good use of what we learned in the last lesson by associating a noun with
-    another noun. This is done with something called particles. Particles are one or more Hiragana
-    characters that attach to the end of a word to define the grammatical function of that word in the
-    sentence. Using the correct particles is very important because the meaning of a sentence can
-    completely change just by changing the particles. For example, the sentence "Eat fish." can
-    become "The fish eats." simply by changing one particle.
-</div>
+    <p>
+        We want to now make good use of what we learned in the last lesson by associating a noun with
+        another noun. This is done with something called particles. Particles are one or more Hiragana
+        characters that attach to the end of a word to define the grammatical function of that word in the
+        sentence. Using the correct particles is very important because the meaning of a sentence can
+        completely change just by changing the particles. For example, the sentence "Eat fish." can
+        become "The fish eats." simply by changing one particle.
+    </p>
 
-<div fxLayout="row wrap">
-    <button mat-flat-button style="margin-top: 20px" *ngFor="let content of contents; index as i" color="{{i == contentShow? 'primary': ''}}" (click)="selectContent(i)">{{content}}</button>
-</div>
-<div *ngIf="contentShow == 0">
-    <h2 align="center">The 「は」topic particle</h2>
-    <h3>Vocabulary</h3>
-    <p class="definition">
-        1. 学⽣【がく・せい】- student <br>
-        2. うん- yes (casual) <br>
-        3. 明⽇【あした】- tomorrow <br>
-        4. ううん- no (casual) <br>
-        5. 今⽇【きょう】- today <br>
-        6. 試験【しけん】- exam <br>
-        <br>
-        The first particle we will learn is the topic particle. The topic particle identifies what it is that you're
-        talking about, essentially the topic of your sentence. Let's say a person says, "Not student." This
-        is a perfectly valid sentence in Japanese but it doesn't tell us much without knowing what the
-        person is talking about. The topic particle will allow us to express what our sentences are about.
-        The topic particle is the character 「は」. Now, while this character is normally pronounced as
-        /ha/, it is pronounced /wa/ only when it is being used as the topic particle.
-    </p>
-    <h3>Example 1</h3>
-    <p class="definition">
-        ボブ：アリスは学⽣？ <br>
-        Bob: Is Alice (you) student? <br>
-        アリス：うん、学⽣。 <br>
-        Alice: Yeah, (I) am. <br>
-        <br>
-        Here, Bob is indicating that his question is about Alice. Notice that once the topic is established,
-        Alice does not have to repeat the topic to answer the question about herself.
-    </p>
-    <h3>Example 2</h3>
-    <p class="definition">
-        ボブ：ジョンは明⽇？ <br>
-        Bob: John is tomorrow? <br>
-        アリス：ううん、明⽇じゃない。 <br>
-        Alice: No, not tomorrow. <br>
-        <br>
-        Since we have no context, we don't have enough information to make any sense of this conversation.
-        It obviously makes no sense for John to actually be tomorrow. Given a context, as
-        long as the sentence has something to do with John and tomorrow, it can mean anything. For
-        instance, they could be talking about when John is taking an exam.
-    </p>
-    <h3>Example 3</h3>
-    <p class="definition">
-        アリス：今⽇は試験だ。<br>
-        Alice: Today is exam. <br>
-        ボブ：ジョンは？ <br>
-        Bob: What about John? <br>
-        アリス：ジョンは明⽇。 <br>
-        Alice: John is tomorrow. (As for John, the exam is tomorrow.) <br>
-        <br>
-        The last example shows how generic the topic of a sentence is. A topic can be referring to
-        any action or object from anywhere even including other sentences. For example, in the last
-        sentence from the previous example, even though the sentence is about when the exam is for
-        John, the word "exam" doesn't appear anywhere in the sentence!
-        We'll see a more specific particle that ties more closely into the sentence at the end of this lesson
-        with the identifier particle.   
-    </p>
-</div>
+    <!--  
+    'は',
+    'を',
+    'が',
+    'も',
+    'と',
+    'や・とか',
+    'の',
+    'に',
+    'へ',
+    'で',
+    'その他 (Extra)'
+    -->
+    <div fxLayout="row" class="button-group-lg sticky background-white">
+        <div fxLayout="row" class="button-group-sm">
+            <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px"
+                *ngFor="let content of contents; index as i" color="{{i == contentShow? 'primary': ''}}"
+                (click)="selectContent(i)">{{content}}</button>
+        </div>
+    </div>
+
+    <div *ngIf="contentShow == 0" [@fadeIn]>
+        <h2>The 「は」topic particle</h2>
+        <h3>Vocabulary</h3>
+        <p>
+            1. 学⽣【がく・せい】- student <br>
+            2. うん- yes (casual) <br>
+            3. 明⽇【あした】- tomorrow <br>
+            4. ううん- no (casual) <br>
+            5. 今⽇【きょう】- today <br>
+            6. 試験【しけん】- exam <br>
+        </p>
+        <p>
+            The first particle we will learn is the topic particle. The topic particle identifies what it is that you're
+            talking about, essentially the topic of your sentence. Let's say a person says, "Not student." This
+            is a perfectly valid sentence in Japanese but it doesn't tell us much without knowing what the
+            person is talking about. The topic particle will allow us to express what our sentences are about.
+            The topic particle is the character 「は」. Now, while this character is normally pronounced as
+            /ha/, it is pronounced /wa/ only when it is being used as the topic particle.
+        </p>
+        <h3>Example 1</h3>
+        <p>
+            ボブ：アリスは学⽣？ <br>
+            Bob: Is Alice (you) student? <br>
+            アリス：うん、学⽣。 <br>
+            Alice: Yeah, (I) am. <br>
+        </p>
+        <p>
+            Here, Bob is indicating that his question is about Alice. Notice that once the topic is established,
+            Alice does not have to repeat the topic to answer the question about herself.
+        </p>
+        <h3>Example 2</h3>
+        <p>
+            ボブ：ジョンは明⽇？ <br>
+            Bob: John is tomorrow? <br>
+            アリス：ううん、明⽇じゃない。 <br>
+            Alice: No, not tomorrow. <br>
+        </p>
+        <p>
+            Since we have no context, we don't have enough information to make any sense of this conversation.
+            It obviously makes no sense for John to actually be tomorrow. Given a context, as
+            long as the sentence has something to do with John and tomorrow, it can mean anything. For
+            instance, they could be talking about when John is taking an exam.
+        </p>
+        <h3>Example 3</h3>
+        <p>
+            アリス：今⽇は試験だ。<br>
+            Alice: Today is exam. <br>
+            ボブ：ジョンは？ <br>
+            Bob: What about John? <br>
+            アリス：ジョンは明⽇。 <br>
+            Alice: John is tomorrow. (As for John, the exam is tomorrow.) <br>
+        </p>
+        <p>
+            The last example shows how generic the topic of a sentence is. A topic can be referring to
+            any action or object from anywhere even including other sentences. For example, in the last
+            sentence from the previous example, even though the sentence is about when the exam is for
+            John, the word "exam" doesn't appear anywhere in the sentence!
+            We'll see a more specific particle that ties more closely into the sentence at the end of this lesson
+            with the identifier particle.
+        </p>
+    </div>
+    <div *ngIf="contentShow == 1" [@fadeIn]>
+        <h2>The direct object 「を」 particle</h2>
+        <h3>Vocabulary</h3>
+        <p>
+            1. 魚【さかな】- fish <br>
+            2. 食べる【た・べる】(ru-verb) - to eat <br>
+            3. ジュース - juice <br>
+            4. 飲む【の・む】(u-verb) - to drink <br>
+            5. 街【まち】- town <br>
+            6. ぶらぶら - wandering; aimlessly <br>
+            7. 歩く【ある・く】(u-verb) - to walk <br>
+            8. 高速【こう・そく】- high-speed <br>
+            9. 道路【どう・ろ】- route <br>
+            10. 走る【はし・る】(u-verb) - to run <br>
+            11. 毎日【まい・にち】- everyday <br>
+            12. 日本語【に・ほん・ご】- Japanese (language) <br>
+            13. 勉強【べん・きょう】- study <br>
+            14. する (exception) - to do <br>
+            15. メールアドレス - email address <br>
+            16. 登録【とう・ろく】- register <br>
+        </p>
+
+        <p>
+            The first particle we will learn is the object particle because it is a very straightforward particle. The
+            「を」 character is attached to the end of a word to signify that that word is the direct object of the verb.
+            This character is essentially never used anywhere else. That is why the katakana equivalent 「ヲ」 is
+            almost never used since particles are always written in hiragana. The 「を」 character, while technically
+            pronounced as /wo/ essentially sounds like /o/ in real speech. Here are some examples of the direct
+            object particle in action.
+        </p>
+        <h3>Examples</h3>
+        <p>
+            1. 魚を食べる。 <br>
+            Eat fish. <br>
+            2. ジュースを飲んだ。 <br>
+            Drank juice. <br>
+        </p>
+
+        <p>
+            Unlike the direct object we're familiar with in English, places can also be the direct object of motion
+            verbs
+            such as 「歩く」 and 「走る」 . Since the motion verb is done to the location, the concept of direct
+            object is the same in Japanese. However, as you can see by the next examples, it often translates to
+            something different in English due to the slight difference of the concept of direct object.
+        </p>
+
+        <p>
+            1. 街をぶらぶら歩く。 <br>
+            Aimlessly walk through town. (Lit: Aimlessly walk town) <br>
+            2. 高速道路を走る。 <br>
+            Run through expressway. (Lit: Run expressway) <br>
+        </p>
+        <p>
+            When you use 「する」 with a noun, the 「を」 particle is optional and you can treat the whole [noun + する] as one
+            verb.
+        </p>
+        <p>
+            1. 毎日、日本語を勉強する。 <br>
+            Study Japanese everyday. <br>
+            2. メールアドレスを登録した。 <br>
+            Registered email address. <br>
+        </p>
+
+
+    </div>
+    <div *ngIf="contentShow == 2" [@fadeIn]>
+        <h2>The 「が」 identifier particle</h2>
+        <h3>Vocabulary</h3>
+        <p>
+
+            1. 誰【だれ】- who <br>
+            2. 学生【がく・せい】- student <br>
+            3. 私【わたし】- me; myself; I <br>
+
+            <p>
+
+                We can make a topic using the 「は」 and 「も」 particle. But what if we donʼt know
+                what the topic is? What if I wanted to ask, “Who is the student?”What I need is some kind of
+                identifier because I don't know who the student is. If I use the topic particle, the question would
+                become, “Is who the student?”and that doesn't make any sense because "who" is not an actual
+                person.
+            </p>
+            <p>
+
+                This is where the 「が」 particle comes into play. It is also referred to as the subject particle
+                but I hate that name since "subject" means something completely different in English grammar.
+                Instead, I call it the identifier particle because the particle indicates that the speaker wants to
+                identify something unspecified.
+            </p>
+            <h3>Example 1</h3>
+            <p>
+
+                ボブ:誰が学生? <br>
+                Bob: Who is the one that is student? <br>
+                アリス:ジョンが学生。 <br>
+                Alice: John is the one who is student. <br>
+            </p>
+            <p>
+
+                Bob wants to identify who among all the possible candidates is a student. Alice responds that
+                John is the one. Notice, Alice could also have answered with the topic particle to indicate that,
+                speaking of John, she knows that he is a student (maybe not the student). You can see the
+                difference in the next example.
+            </p>
+
+            <h3>Example 2</h3>
+
+            <p>
+                1. 誰が学生? <br>
+                Who is the one that is student?
+                2. 学生は誰? <br>
+                (The) student is who? <br>
+            </p>
+            <p>
+                The first sentence seeks to identify a specific person for "student" while the second sentence is
+                simply talking about the student. You cannot replace 「が」 with 「は」 in the first sentence
+                because "who" would become the topic and the question would become, "Is who a student?"
+                The two particles 「は」 and 「が」 may seem very similar only because it is impossible
+                to translate them directly into English. For example, the two sentences below have the same
+                English translation.*
+            </p>
+
+            <h3>Example 3</h3>
+
+            <p>
+                1. 私は学生。 <br>
+                I (am) student. <br>
+                2. 私が学生。 <br>
+                I (am) student. <br>
+            </p>
+            <p>
+                However, they only seem similar because English cannot express information about the context
+                as succinctly as Japanese sometimes can. In the first sentence, since 「私」 is the topic, the
+                sentence means, "Speaking about me, I am a student".
+            </p>
+            <p>
+                However, the second sentence is specifying who the 「学生」 is. If we want to know who the
+                student is, the 「が」 particle tells us it's 「私」. You can also think about the 「が」 particle as
+                always answering a silent question. The second sentence might be answering a question, "Who
+                is the student?" I often translate the topic particle as "as for; about" and the identifier particle as
+                "the one; the thing" to illustrate the difference.
+            </p>
+            <p>
+                1. 私は学生。 <br>
+                As for me, (I am) student. <br>
+                2. 私が学生。 <br>
+                I (am) the one (that is) student. <br>
+            </p>
+            <p>
+                The 「は」 and 「が」 particles are actually quite different if you think of it the right way. The
+                「が」 particle identifies a specific property of something while the 「は」 particle is used only to
+                bring up a new topic of conversation. This is why, in longer sentences, it is common to separate
+            </p>
+
+    </div>
+    <div *ngIf="contentShow == 3" [@fadeIn]>
+        <h2>The 「も」 inclusive topic particle</h2>
+        <h3>Vocabulary</h3>
+        <p>
+            1. 学生【がく・せい】- student <br>
+            2. うん - yes (casual) <br>
+            3. でも - but <br>
+            4. ううん - no (casual) <br>
+        </p>
+        <p>
+            Another particle that is very similar to the topic particle is the inclusive topic particle. It is essen-
+            tially the topic particle with the additional meaning of "also". Basically, it can introduce another
+            topic in addition to the current topic. The inclusive topic particle is the 「も」 character and its
+            use is best explained by an example.
+
+            <h3>Example 1</h3>
+
+            <p>
+                ボブ:アリスは学生? <br>
+                Bob: Is Alice (you) student? <br>
+                アリス:うん、トムも学生。 <br>
+                Alice: Yeah, and Tom is also student. <br>
+            </p>
+            <p>
+                The inclusion of 「も」 must be consistent with the answer. It would not make sense to say, "I
+                am a student, and Tom is also not a student." Instead, use the 「は」 particle to make a break
+                from the inclusion as seen in the next example.
+            </p>
+            <h3>Example 2</h3>
+
+            <p>
+                ボブ:アリスは学生? <br>
+                Bob: Is Alice (you) student? <br>
+                アリス:うん、でもトムは学生じゃない。 <br>
+                Alice: Yeah, but Tom is not student. <br>
+                Below is an example of inclusion with the negative. <br>
+            </p>
+            <h3>Example 3</h3>
+            <p>
+
+                ボブ:アリスは学生? <br>
+                Bob: Is Alice (you) student? <br>
+                アリス:ううん、トムも学生じゃない。 <br>
+                Alice: No, and Tom is also not student. <br>
+            </p>
+    </div>
+    <div *ngIf="contentShow == 4" [@fadeIn]>
+        <h2>The Inclusive 「と」 particle</h2>
+
+        <h3>Vocabulary</h3>
+
+        <p>
+            1. ナイフ - knife <br>
+            2. フォーク - fork <br>
+            3. ステーキ - steak <br>
+            4. 食べる【た・べる】(ru-verb) - to eat <br>
+            5. 本【ほん】- book <br>
+            6. 雑誌【ざっ・し】- magazine <br>
+            7. 葉書【はがき】- postcard <br>
+            8. 買う【か・う】(u-verb) - to buy <br>
+            9. 友達【とも・だち】- friend <br>
+            10. 話す【はな・す】(u-verb) - to speak <br>
+            11. 先生【せん・せい】- teacher <br>
+            12. 会う【あ・う】(u-verb) - to meet <br>
+        </p>
+        <p>
+            The「と」particle is similar to the「も」particle in that it contains a meaning of inclusion. It can combine
+            two or more nouns together to mean "and".
+        </p>
+        <p>
+            1. ナイフとフォークでステーキを食べた。 <br>
+            Ate steak by means of knife and fork. <br>
+            2. 本と雑誌と葉書を買った。 <br>
+            Bought book, magazine, and post card. <br>
+        </p>
+        <p>
+            Another similar use of the 「と」 particle is to show an action that was done together with someone or
+            something else.
+        </p>
+        <p>
+            1. 友達と話した。 <br>
+            Talked with friend. <br>
+            2. 先生と会った。 <br>
+            Met with teacher. <br>
+        </p>
+
+    </div>
+    <div *ngIf="contentShow == 5" [@fadeIn]>
+
+        <h2>The Vague Listing 「や」 and 「とか」 particles</h2>
+        <h3>Vocabulary</h3>
+        <p>
+            1. 飲み物【の・み・もの】- beverage <br>
+            2. カップ - cup <br>
+            3. ナプキン - napkin <br>
+            4. いる (u-verb) - to need <br>
+            5. 靴【くつ】- shoes <br>
+            6. シャツ - shirt <br>
+            7. 買う【か・う】(u-verb) - to buy <br>
+        </p>
+        <p>
+            The 「や」 particle, just like the 「と」 particle, is used to list one or more nouns except that it is much
+            more vague than the 「と」 particle. It implies that there may be other things that are unlisted and that
+            not all items in the list may apply. In English, you might think of this as an "and/or, etc." type of
+            listing.
+        </p>
+        <p>
+            1. 飲み物やカップやナプキンは、いらない? <br>
+            You don't need (things like) drink, cup, or napkin, etc.? <br>
+            2. 靴やシャツを買う。 <br>
+            Buy (things like) shoes and shirt, etc... <br>
+        </p>
+        <p>
+            「とか」 also has the same meaning as 「や」 but is a slightly more colloquial expression.
+        </p>
+        <p>
+            1. 飲み物とかカップとかナプキンは、いらない? <br>
+            You don't need (things like) drink, cup, or napkin, etc.? <br>
+            2. 靴とかシャツを買う。 <br>
+            Buy (things like) shoes and shirt, etc... <br>
+        </p>
+    </div>
+    <div *ngIf="contentShow == 6" [@fadeIn]>
+
+        <h2>The 「の」 particle</h2>
+        <h3>Vocabulary</h3>
+        <p>
+            1. 本【ほん】- book <br>
+            2. アメリカ - America <br>
+            3. 大学【だい・がく】- college <br>
+            4. 学生【がく・せい】- student <br>
+            5. それ - that <br>
+            6. その - abbreviation of 「それの」 <br>
+            7. シャツ - shirt <br>
+            8. 誰【だれ】- who <br>
+            9. これ - this <br>
+            10. この - abbreviation of 「これの」 <br>
+            11. あれ - that (over there) <br>
+            12. あの - abbreviation of 「あれの」 <br>
+            13. 白い【し・ろい】(i-adj) - white <br>
+            14. かわいい (i-adj) - cute <br>
+            15. 授業【じゅ・ぎょう】- class <br>
+            16. 行く【い・く】(u-verb) - to go <br>
+            17. 忘れる【わす・れる】(ru-verb) - to forget <br>
+            18. こと - event, matter <br>
+            19. 毎日【まい・にち】- every day <br>
+            20. 勉強【べん・きょう】- study <br>
+            21. する (exception) - to do <br>
+            22. 大変【たい・へん】(na-adj) - tough, hard time <br>
+            23. 同じ【おな・じ】- same <br>
+            24. 物【もの】- object <br>
+            25. 食べる【た・べる】(ru-verb) - to eat <br>
+            26. 面白い【おも・し・ろい】(i-adj) - interesting <br>
+            27. 静か【しず・か】(na-adj) - quiet <br>
+            28. 部屋【へ・や】- room <br>
+            29. 人【ひと】- person <br>
+            30. 学校【がっ・こう】- school <br>
+        </p>
+        <p>
+            The「の」 particle has many uses and it is a very powerful particle. It is introduced here because like the
+            「と」 and 「や」 particle, it can be used to connect one or more nouns. Let's look at a few examples.
+        </p>
+        <p>
+            1. ボブの本。 <br>
+            Book of Bob. <br>
+            2. 本のボブ。 <br>
+            Bob of book. <br>
+        </p>
+        <p>
+            The first sentence essentially means, "Bob's book." (not a lost bible chapter). The second sentence
+            means, "Book's Bob" which is probably a mistake. I've translated the first example as "book of Bob"
+            because the 「の」 particle doesn't always imply possession as the next example shows.
+        </p>
+        <p>
+            1. ボブは、アメリカの大学の学生だ。 <br>
+            Bob is student of college of America. <br>
+        </p>
+        <p>
+            In normal English, this would translate to, "Bob is a student of an American college." The order of modifi-
+            cation is backwards so Bob is a student of a college that is American. 「学生の大学のアメリカ」 means
+            "America of college of student" which is probably an error and makes little sense. (America of student's
+            college?)
+        </p>
+        <p>
+            The noun that is being modified can be omitted if the context clearly indicates what is being omitted. The
+            following highlighted redundant words can be omitted.
+        </p>
+        <p>
+            1. そのシャツは誰のシャツ? <br>
+            Whose shirt is that shirt? <br>
+            2. ボブのシャツだ。 <br>
+            It is shirt of Bob. <br>
+            to become: <br>
+            1. そのシャツは誰の? <br>
+            Whose shirt is that? <br>
+            2. ボブのだ。 <br>
+            It is of Bob. <br>
+        </p>
+        <p>
+            (「その」 is an abbreviation of 「それ + の」 so it directly modifies the noun because the 「の」 particle
+            is intrinsically attached. Other words include 「この」 from 「これの」 and 「あの」 from 「あれの」.)
+            The 「の」 particle in this usage essentially replaces the noun and takes over the role as a noun itself.
+            We can essentially treat adjectives and verbs just like nouns by adding the 「の」 particle to it. The
+            particle then becomes a generic noun, which we can treat just like a regular noun.
+        </p>
+        <p>
+            1. 白いのは、かわいい。 <br>
+            Thing that is white is cute. <br>
+            2. 授業に行くのを忘れた。 <br>
+        </p>
+        <p>
+            Forgot the event of going to class.
+            Now we can use the direct object, topic, and identifier particle with verbs and adjectives. We don't nec-
+            essarily have to use the 「の」 particle here. We can use the noun 「物」, which is a generic object or
+            「こと」 for a generic event.
+        </p>
+        <p>
+            For example, we can also say:
+        </p>
+        <p>
+            1. 白い物は、かわいい。 <br>
+            Thing that is white is cute. <br>
+            2. 授業に行くことを忘れた。 <br>
+        </p>
+        <p>
+            Forgot the thing of going to class.
+            However, the 「の」 particle is very useful in that you don't have to specify a particular noun. In the next
+            examples, the 「の」 particle is not replacing any particular noun, it just allows us to modify verb and
+            adjective clauses like noun clauses. The relative clauses are highlighted.
+        </p>
+        <p>
+            1. 毎日勉強するのは大変。 <br>
+            The thing of studying every day is tough. <br>
+            2. 毎日同じ物を食べるのは、面白くない。 <br>
+            It's not interesting to eat same thing every day.
+        </p>
+        <p>
+            Even when substituting「の」for a noun, you still need the「な」to modify the noun when a na-adjective
+            is being used.
+        </p>
+        <p>
+            • 静かな部屋が、アリスの部屋だ。 <br>
+            Quiet room is room of Alice. <br>
+        </p>
+        <p>
+            becomes: <br>
+            • 静かなのが、アリスの部屋だ。 <br>
+            Quiet one is room of Alice. <br>
+        </p>
+        <p>
+            *Warning: This may make things seem like you can replace any arbitrary nouns with 「の」 but this is
+            not so. It is important to realize that the sentence must be about the clause and not the noun that was
+            replaced. For example, in the last section we had the sentence, 「学生じゃない人は、 学校に行かな
+            い」. You may think that you can just replace 「人」 with 「の」 to produce 「学生じゃないのは、学
+            校に行かない」 . But in fact, this makes no sense because the sentence is now about the clause "Is
+            not student". The sentence becomes, "The thing of not being student does not go to school" which is
+            complete gibberish because not being a student is a state and it doesn't make sense for a state to go
+            anywhere much less school.
+        </p>
+    </div>
+    <div *ngIf="contentShow == 7" [@fadeIn]>
+        <h2>The target 「に」 particle</h2>
+        <h3>Vocabulary</h3>
+
+        <p>
+            1. 日本【に・ほん】- Japan <br>
+            2. 行く【い・く】(u-verb) - to go <br>
+            3. 家【1) うち; 2) いえ】- 1) one's own home; 2) house <br>
+            4. 帰る【かえ・る】(u-verb) - to go home <br>
+            5. 部屋【へ・や】- room <br>
+            6. 来る【く・る】(exception) - to come <br>
+            7. アメリカ - America <br>
+            8. 宿題【しゅく・だい】- homework <br>
+            9. 今日【きょう】- today <br>
+            10. 明日【あした】- tomorrow <br>
+            11. 猫【ねこ】- cat <br>
+            12. いる (ru-verb) - to exist (animate) <br>
+            13. いす - chair <br>
+            14. 台所【だい・どころ】- kitchen <br>
+            15. ある (u-verb) - to exist (inanimate) <br>
+            16. いい (i-adj) - good <br>
+            17. 友達【とも・だち】- friend <br>
+            18. 会う【あう】(u-verb) - to meet <br>
+            19. 医者【い・しゃ】- doctor <br>
+            20. なる (u-verb) - to become <br>
+            21. 先週【せん・しゅう】- last week <br>
+            22. 図書館【と・しょ・かん】- library <br>
+            23. 来年【らい・ねん】- next year <br>
+        </p>
+        <p>
+            The 「に」 particle can specify a target of a verb. This is different from the 「を」 particle in which the
+            verb does something to the direct object. With the 「に」 particle, the verb does something toward the
+            word associated with the 「に」 particle. For example, the target of any motion verb is specified by the
+            「に」 particle.
+        </p>
+
+        <h3>Examples</h3>
+
+        <p>
+            1. ボブは日本に行った。 <br>
+            Bob went to Japan. <br>
+            2. 家に帰らない。 <br>
+            Not go back home. <br>
+            3. 部屋にくる。 <br>
+            Come to room. <br>
+        </p>
+        <p>
+            As you can see in the last example, the target particle always targets "to" rather than "from". If you
+            wanted to say, "come from" for example, you would need to use 「から」, which means "from". If you used 「に」
+            , it would instead mean "come to". 「から」 is also often paired with 「まで」, which means "up to".
+        </p>
+        <p>
+            1. アリスは、アメリカからきた。 <br>
+            Alice came from America. <br>
+            2. 宿題を今日から明日までする。 <br>
+            Will do homework from today to tomorrow. <br>
+        </p>
+        <p>
+            The idea of a target in Japanese is very general and is not restricted to motion verbs. For example, the
+            location of an object is defined as the target of the verb for existence (ある and いる). Time is also a
+            common target. Here are some examples of non-motion verbs and their targets
+        </p>
+        <p>
+            1. 猫は部屋にいる。 <br>
+            Cat is in room. <br>
+            2. いすが台所にあった。 <br>
+            Chair was in the kitchen. <br>
+            3. いい友達に会った。 <br>
+            Met good friend. <br>
+            4. ジムは医者になる。 <br>
+            Jim will become doctor. <br>
+            5. 先週に図書館に行った。 <br>
+            Went to library last week. <br>
+        </p>
+        <p>
+            Note: Don't forget to use 「ある」 for inanimate objects such as the chair and 「いる」 for animate
+            objects such as the cat.
+            While the 「に」 particle is not always required to indicate time, there is a slight difference in meaning
+            between using the target particle and not using anything at all. In the following examples, the target
+            particle makes the date a specific target emphasizing that the friend will go to Japan at that time. Without
+            the particle, there is no special emphasis.
+        </p>
+        <p>
+            1. 友達は、来年、日本に行く。 <br>
+            Next year, friend go to Japan. <br>
+            2. 友達は、来年に日本に行く。 <br>
+            Friend go to Japan next year. <br>
+        </p>
+    </div>
+    <div *ngIf="contentShow == 8" [@fadeIn]>
+        <h2>The directional 「へ」 particle</h2>
+        <h3>Vocabulary</h3>
+
+        <p>
+            1. 日本【に・ほん】- Japan <br>
+            2. 行く【い・く】(u-verb) - to go <br>
+            3. 家【1) うち; 2) いえ】- 1) one's own home; 2) house <br>
+            4. 帰る【かえ・る】(u-verb) - to go home <br>
+            5. 部屋【へ・や】- room <br>
+            6. 来る【く・る】(exception) - to come <br>
+            7. 医者【い・しゃ】- doctor <br>
+            8. なる (u-verb) - to become <br>
+            9. 勝ち【か・ち】- victory <br>
+            10. 向かう【むか・う】(u-verb) - to face; to go towards <br>
+        </p>
+        <p>
+            While 「へ」 is normally pronounced /he/, when it is being used as a particle, it is always pronounced
+            /e/ (え). The primary difference between the 「に」 and 「へ」 particle is that 「に」 goes to a target
+            as the final, intended destination (both physical or abstract). The 「へ」 particle, on the other hand, is
+            used to express the fact that one is setting out towards the direction of the target. As a result, it is
+            only used with directional motion verbs. It also does not guarantee whether the target is the final intended
+            destination, only that one is heading towards that direction. In other words, the 「に」 particle sticks to
+            the destination while the 「へ」 particle is fuzzy about where one is ultimately headed. For example, if
+            we choose to replace 「に」 with 「へ」 in the first three examples of the previous section, the nuance
+            changes slightly.
+        </p>
+
+        <h3>Examples</h3>
+
+        <p>
+            1. ボブは日本へ行った。 <br>
+            Bob headed towards Japan. <br>
+            2. 家へ帰らない。 <br>
+            Not go home toward house. <br>
+            3. 部屋へくる。 <br>
+            Come towards room. <br>
+        </p>
+        <p>
+            Note that we cannot use the 「へ」 particle with verbs that have no physical direction. For example, the
+            following is incorrect.
+        </p>
+        <p class="exception">
+            • 医者へなる。 <br>
+            (Grammatically incorrect version of 「医者になる」.)
+        </p>
+        <p>
+            This does not mean to say that 「へ」 cannot set out towards an abstract concept. In fact, because of
+            the fuzzy directional meaning of this particle, the 「へ」 particle can also be used to talk about setting
+            out towards certain future goals or expectations.
+        </p>
+        <p>
+            • 勝ちへ向かう。 <br>
+            Go towards victory.
+        </p>
+    </div>
+    <div *ngIf="contentShow == 9" [@fadeIn]>
+        <h2>The contextual 「で」 particle</h2>
+        <h3>Vocabulary</h3>
+
+        <p>
+            1. 映画館【えい・が・かん】- movie theatre <br>
+            2. 見る【み・る】(ru-verb) - to see <br>
+            3. バス - bus <br>
+            4. 帰る【かえ・る】(u-verb) - to go home <br>
+            5. レストラン - restaurant <br>
+            6. 昼ご飯【ひる・ご・はん】- lunch <br>
+            7. 食べる【た・べる】(ru-verb) - to eat <br>
+            8. 何【なに/なん】- what <br>
+            9. 暇【ひま】- free (as in not busy) <br>
+        </p>
+        <p>
+            The 「で」 particle will allow us to specify the context in which the action is performed. For example, if a
+            person ate a fish, where did he eat it? If a person went to school, by what means did she go? With what
+            will you eat the soup? All of these questions can be answered with the 「で」 particle. Here are some
+            examples.
+        </p>
+
+        <h3>Examples</h3>
+
+        <p>
+            1. 映画館で見た。 <br>
+            Saw at movie theater. <br>
+            2. バスで帰る。 <br>
+            Go home by bus. <br>
+            3. レストランで昼ご飯を食べた。 <br>
+            Ate lunch at restaurant. <br>
+        </p>
+        <p>
+            It may help to think of 「で」 as meaning "by way of". This way, the same meaning will kind of translate
+            into what the sentence means. The examples will then read: "Saw by way of movie theater", "Go home
+            by way of bus", and "Ate lunch by way of restaurant."
+            Using 「で」 with 「何」
+        </p>
+        <p>
+            The word for "what" (何) is quite annoying because while it's usually read as 「なに」, sometimes it is
+            read as 「なん」 depending on how it's used. And since it's always written in Kanji, you can't tell which
+            it is. I would suggest sticking with 「なに」 until someone corrects you for when it should be 「なん」.
+            With the 「で」 particle, it is read as 「なに」 as well. (Hold the mouse cursor over the word to check
+            the reading.)
+        </p>
+        <p>
+            1. 何できた? <br>
+            Came by the way of what? <br>
+            2. バスできた。 <br>
+            Came by the way of bus. <br>
+        </p>
+        <p>
+            Here's the confusing part. There is a colloquial version of the word "why" that is used much more often
+            than the less colloquial version 「どうして」 or the more forceful 「なぜ」. It is also written as 「何で」
+            but it is read as 「なんで」 . This is a completely separate word and has nothing to do with the 「で」
+            particle.
+        </p>
+        <p>
+            1. 何できた? <br>
+            Why did you come? <br>
+            2. 暇だから。 <br>
+            Because I am free (as in have nothing to do). <br>
+        </p>
+        <p>
+            The 「から」 here meaning "because" is different from the 「から」 we just learned and will be covered
+            later in the compound sentence section. Basically the point is that the two sentences, while written the
+            same way, are read differently and mean completely different things. Don't worry. This causes less
+            confusion than you think because 95% of the time, the latter is used rather than the former. And even
+            when 「なにで」 is intended, the context will leave no mistake on which one is being used. Even in this
+            short example snippet, you can tell which it is by looking at the answer to the question.
+        </p>
+    </div>
+    <div *ngIf="contentShow == 10" [@fadeIn]>
+        <h2>When location is the topic</h2>
+        <h3>Vocabulary</h3>
+        <p>
+            1. 学校【がっ・こう】- school <br>
+            2. 行く【い・く】(u-verb) - to go <br>
+            3. 図書館【と・しょ・かん】- library <br>
+            4. どこ - where <br>
+            5. イタリア - Italy <br>
+            6. レストラン - restaurant <br>
+            7. どう - how <br>
+        </p>
+        <p>
+            There are times when the location of an action is also the topic of a sentence. You can attach the topic
+            particle (「は」 and 「も」) to the three particles that indicate location (「に」、「へ」、「で」) when
+            the location is the topic. We'll see how location might become the topic in the following examples.
+        </p>
+        <h3>
+            Example 1
+        </h3>
+        <p>
+            ボブ:学校に行った? <br>
+            Bob: (Did you) go to school? <br>
+            アリス:行かなかった。 <br>
+            Alice: Didn't go. <br>
+            ボブ:図書館には? <br>
+            Bob: What about library? <br>
+            アリス:図書館にも行かなかった。 <br>
+            Alice: Also didn't go to library. <br>
+        </p>
+        <p>
+            In this example, Bob brings up a new topic (library) and so the location becomes the topic. The sentence
+            is actually an abbreviated version of 「図書館には行った?」 which you can ascertain from the context.
+        </p>
+        <h3>
+            Example 2
+        </h3>
+        <p>
+            ボブ:どこで食べる? <br>
+            Bob: Eat where? <br>
+            アリス:イタリアレストランではどう? <br>
+            Alice: How about Italian restaurant? <br>
+        </p>
+        <p>
+            Bob asks, "Where shall we eat?" and Alice suggests an Italian restaurant. A sentence like, "How about..."
+            usually brings up a new topic because the person is suggesting something new. In this case, the location
+            (restaurant) is being suggested so it becomes the topic.
+        </p>
+        <p>
+            1. 日本語【に・ほん・ご】- Japanese (language) <br>
+            2. 習う【なら・う】(u-verb) - to learn <br>
+        </p>
+        <p>
+            The direct object particle is different from particles related to location in that you cannot use any other
+            particles at the same time. For example, going by the previous section, you might have guessed that you
+            can say 「をは」 to express a direct object that is also the topic but this is not the case. A topic can be
+            a direct object without using the 「を」 particle. In fact, putting the 「を」 particle in will make it wrong.
+        </p>
+        <h3>
+            Examples
+        </h3>
+        <p>
+            1. 日本語を習う。 <br>
+            Learn Japanese. <br>
+            2. 日本語は、習う。 <br>
+            About Japanese, (will) learn it. <br>
+        </p>
+        <p>
+            Please take care to not make this mistake.
+        </p>
+        <p class="exception">
+            • 日本語をは、習う。
+            (This is incorrect.)
+        </p>
+    </div>
 </div>

@@ -3,6 +3,10 @@
 
 .mat-toolbar-row, .mat-toolbar-single-row {
     min-height: 64px;
+    
+}
+.mat-flat-button {
+    min-width: unset !important;
 }
 
 @media (max-width: 599px) {
@@ -11,10 +15,13 @@
     }
 }
 
+.sticky {
+    position: sticky;
+    position: -webkit- sticky;
+    top: 0;
+    z-index: 100;
+}
 
-.definition {
-    max-width: 900px;
-    word-wrap: break-word;
-    word-spacing: normal;
-    white-space: pre-wrap;
+.background-white {
+    background-color: white;
 }
