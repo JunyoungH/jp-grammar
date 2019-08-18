@@ -1,1 +1,582 @@
-<p>basic-expression works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" [@fadeIn]>
+  <h2>Your Adventure in learning Japanese</h2>
+
+  <p>
+    The learning journey of this new language is not a smooth sail, but I managed to overcome the difficulties,
+    at the same time made the journey adventurous and enjoyable one. You will enjoy the process too!
+  </p>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" class="sticky background-white width-100">
+    <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{0 == contentShow? 'primary': ''}}"
+      (click)="selectContent(0)">挨拶【あい・さつ】</button>
+
+    <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{1 == contentShow? 'primary': ''}}"
+      (click)="selectContent(1)">名詞【めい・し】</button>
+
+    <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{2 == contentShow? 'primary': ''}}"
+      (click)="selectContent(2)">指示代名詞【し・じ・だい・めい・し】</button>
+  </div>
+
+  <div *ngIf="contentShow == 0" [@fadeIn]>
+    <h2>挨拶【あい・さつ】</h2>
+    <h2>Basic Japanese Greetings</h2>
+
+    <p>
+      It is always good to learn some basic Japanese greetings at the start of learning this new language.
+      You may not understand the real meaning of each word at this moment. Just give your best shot at memorizing some
+      of them, or all of them, if you can.
+      In time, you will get to the stage of understanding the meanings of all the words.
+      At the same time, this may be your first time speaking in Japanese. It may sound weird. But it's fun.
+      Try it out. Everyone has his or her first time.
+    </p>
+
+    <h3>
+      Meeting Japanese Friend For The First Time
+    </h3>
+    <p>
+      When meeting a Japanese friend for the first time, the greetings that we will normally say are:
+    </p>
+
+    <p>
+      はじめまして。<br>
+      How do you do? (This sentence is used only if you are meeting this person for the first time)
+    </p>
+
+    <p>
+      わたしはジョンです。<br>
+      My name is John. (Assuming your name is John)
+
+    </p>
+    <p>
+      どうぞよろしくおねがいします。<br>
+      I am pleased to meet you. (Literally the meaning for this sentence is "Please form good relations with me" or
+      "Please take good care of me")
+    </p>
+
+    <p>
+      And most likely, your Japanese friend will reply you with:
+
+    </p>
+
+    <p>
+      こちらこそ、どうぞよろしくおねがいします。<br>
+      The pleasure is all mine.<br>
+      I am pleased to meet you. (Literally the meaning for this sentence is "Please form good relations with me" or
+      "Please take good care of me")
+    </p>
+
+    <p>
+      わたしはたなかです。<br>
+      My name is Tanaka. (Assuming your Japanese friend's name is Tanaka)
+
+    </p>
+
+    <p>
+      Some Basic Examples of Japanese Greetings
+
+    </p>
+
+    <p>
+      1. おはようございます。<br>
+      Good morning <br><br>
+
+      2. こんにちは。 <br>
+      Hello / Good afternoon <br><br>
+
+      3. こんばんは。 <br>
+      Good evening <br><br>
+
+      4. さようなら。 <br>
+      Good bye (This is only used if you are leaving for a long time, such as overseas travel) <br><br>
+
+      5. ありがとうございます。 <br>
+      Thank you <br><br>
+
+      6. どういたしまして。 <br>
+      You are welcome / Don't mention it / Not at all <br><br>
+
+      7. すみません。 <br>
+      I am sorry / Excuse me <br><br>
+
+      8. ごめんなさい。 <br>
+      I am sorry <br><br>
+
+      9. おやすみなさい。 <br>
+      Good night <br><br>
+
+      10. おめでとうございます。 <br>
+      Congratulations <br><br>
+
+      11. おげんきですか。 <br>
+      How are you? <br><br>
+
+      12. はい、おかげさまでげんきです。 <br>
+      Yes, due to your kind thoughts, I am very good <br><br>
+
+      13. おなまえは。 <br>
+      What is your name? <br><br>
+
+      14. ジョンともうします。 <br>
+      My name is John <br><br>
+
+      15. いただきます。 <br>
+      You say this to express your gratitude before meals <br><br>
+
+      16. ごちそうさまでした。 <br>
+      You say this to express your gratitude after meals <br><br>
+
+      17. おきをつけて。 <br>
+      Please be careful <br><br>
+
+      18. おだいじに。 <br>
+      Take care of your body (say this to friend who is sick) <br><br>
+
+      19. またあした。 <br>
+      See you tomorrow <br><br>
+
+      20. ではまた。 <br>
+      See you <br><br>
+    </p>
+  </div>
+
+  <div *ngIf="contentShow == 1" [@fadeIn]>
+    <h2>名詞【めい・し】</h2>
+    <h3> Declaring something is so and so using 「だ」</h3>
+
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. あなた - you <br>
+      2. 私【わたし】- I <br>
+      3. 人【ひと】- person <br>
+      4. 学生【がく・せい】- student <br>
+      5. 会社員【かい・しゃ・いん】- office worker <br>
+      6. 勉強【べんきょう】- study <br>
+      7. する - do
+    </p>
+
+    <p>
+      One of the trickiest part of Japanese is that there is no verb for the state-of-being like the verb
+      "to be" in English. You can, however, declare what something is by attaching the Hiragana
+      character 「だ」 to a noun or 形容動詞【けい・よう・どう・し】 only. (We will learn about 形容動詞【けい・よう・どう・し】 in the
+      section on adjectives.)
+    </p>
+
+    <h3>Examples</h3>
+
+    <p>
+      1. 人だ。 <br>
+      Is person. <br> <br>
+      2. 学生だ。 <br>
+      Is student. <br> <br>
+      3. 会社員だ <br>
+      Is office worker <br>
+    </p>
+
+    <p>
+      Seems easy enough. Here's the real kicker though.
+
+    </p>
+
+    <h3>
+      A state-of-being can be implied without using . 「だ」!
+    </h3>
+
+    <p>
+      You can say you're doing well or someone is a student without using 「だ」 at all. For example,
+      below is an example of a very typical greeting among friends. Also notice how the subject isn't
+      even specified when it's obvious from the context.
+    </p>
+
+    <h3>
+      Typical casual greeting
+    </h3>
+    <p>
+      A:あなたは会社員? <br>
+      A: Are you well an office worker? <br> <br>
+      B:うん。会社員。 <br>
+      B: Yes, (I'm) an office worker. <br>
+    </p>
+
+    <p>
+      So you may be wondering, "What's the point of using 「だ」?" Well, the main difference is that a
+      declarative statement makes the sentence sound more emphatic and forceful in order to make
+      it more... well declarative. Therefore, it is more common to hear men use 「だ」 at the end of
+      sentences.
+    </p>
+    <p>
+      The declarative 「だ」 is also needed in various grammatical structures where a state-of-being
+      must be explicitly declared. There are also times when you cannot attach it. It's all quite a pain
+      in the butt really but you don't have to worry about it yet.
+    </p>
+    <h3>Conjugating to the negative state-of-being</h3>
+
+    <p>
+      In Japanese, negative and past tense are all expressed by conjugation. We can conjugate a
+      noun or adjective to either its negative or past tense to say that something is not [X] or that
+      something was [X]. This may be a bit hard to grasp at first but none of these state-of-being
+      conjugations make anything declarative like 「だ」 does.
+    </p>
+
+    <h3>Conjugation rules for 名詞【めい・し】</h3>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>人</td>
+          <td>だ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>ひと</td>
+          <td>ではない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>ひと</td>
+          <td>だった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>ひと</td>
+          <td>で</td>
+          <td>Connective</td>
+        </tr>
+
+        <tr>
+          <td>ひと</td>
+          <td>だったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>ひと</td>
+          <td>なら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Example</h3>
+    <p>
+      1. 私は会社員だ。 <br>
+      I am an office worker. <br> <br>
+      2. 私は学生ではない。 <br>
+      I am not a student. <br> <br>
+      4. 私は学生だった。 <br>
+      I was a student. <br> <br>
+      3. 私は学生で会社員だ。 <br>
+      I am a student and an office worker. <br> <br>
+      4. 私は学生だったら、勉強をする。 <br>
+      If I am a student, I will study. <br> <br>
+      5. あなたは会社員なら、私は学生だ。 <br>
+      If you are an office worker, I am a student.
+    </p>
+
+    <h3>Vocabulary</h3>
+    <p>
+      朝
+      昼
+      夜
+      一昨日
+      昨日
+      今日
+      明日
+      明後日
+      一昨年
+      去年
+      今年
+      来年
+      再来年
+      上
+      下
+      右
+      左
+      真ん中
+      北
+      南
+      西
+      東
+      家
+      部屋
+      電気
+      水
+      氷
+      火
+      皿
+      時計
+      扇風機
+      クーラ
+      パソコン
+      テレビ
+      電子レンジ
+      たんす
+      冷蔵庫
+      椅子
+      机
+      会社
+      病院
+      警察
+      警察官
+      おまわり
+      消防士
+      弁護牛
+      開発者
+      運動
+      趣味
+      特技
+      食べ物
+      ご飯
+      野菜
+      果物
+      林檎
+      葡萄
+      苺
+      車
+      自転車
+      地下鉄
+      電車
+      汽車
+      飛行機
+      船
+      箱
+      袋
+      鞄
+      靴
+      靴下
+      下着
+      上着
+
+
+    </p>
+  </div>
+
+  <div *ngIf="contentShow == 2" [@fadeIn]>
+    <h2>指示代名詞【し・じ・だい・めい・し】</h2>
+
+    <h3>Demonstrative Pronouns - こ・そ・あ・ど Series</h3>
+
+    <p>
+      There is an obvious distinction between demonstrative pronouns and demonstrative adjectives in Japanese.
+      'This' and 'that' in the Japanese language are both examples of the former as well as the latter.
+      You might have noticed that native Japanese used these three words: これ・それ・あれ to refer to
+      things or people around them.
+    </p>
+
+    <p>
+      These three are the most commonly used demonstrative pronouns in Japanese. Unlike in the English language where
+      'this + bag' or 'that + bag' are followed by nouns, demonstrative pronouns in Japanese are not followed by a noun.
+    </p>
+
+    <h3>
+      There are three demonstrative adjectives in Japanese: この・その・あの.
+    </h3>
+
+    <p>
+      Demonstrative adjectives in the Japanese language are followed by a noun, similar to English i.e. this bag, that
+      bag
+      etc.
+    </p>
+
+    <h3>
+      これ・それ・あれ
+    </h3>
+
+    <p>
+      The three most commonly used Japanese demonstrative pronouns are これ・それ・あれ. While in English
+      we identify objects by "this" and "that", Japanese natives identify objects by "this", "that", "that over there".
+
+    </p>
+
+    <h3>
+      これ refers to an object near to the speaker <br>
+      それ explains an object near to the listener <br>
+      あれ dictates an object far from both the speaker and the listener <br>
+    </h3>
+
+
+    <p>
+      Everything is in reference from the point of view of the speaker. So the speaker can point to a bag in front of
+      him
+      and say:
+    </p>
+
+    <p>
+      これはわたしのかばんです。<br>
+      This is my bag.
+    </p>
+    <p>
+      The speaker can point to a bag in front of the listener and say:
+
+    </p>
+    <p>
+      それはあなたのかばんです。<br>
+      That is your bag.
+    </p>
+
+    <p>
+      The speaker can then point to a bag far away from both of them and say:
+
+    </p>
+    <p>
+      あれはジョンさんのかばんです。<br>
+      That (over there) is John's bag.
+    </p>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-2.png" alt=" Japanese demonstrative pronouns">
+      <span> Japanese demonstrative pronouns</span>
+    </div>
+    <p>
+      Depending on the situation, sometimes if both the speaker and the listener are close enough, they can consider
+      themselves as one entity. Therefore they can refer to object near to them as これ, refer to object slightly
+      away from them as それ and object far away from them as あれ.
+    </p>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+        <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-2.png" alt=" Japanese demonstrative pronouns"><br>
+    </div>
+    <p>
+      There is an associated question word どれ for these demonstrative pronouns. You can use this to ask question
+      when you want to determine certain object from within a group of similar objects.
+    </p>
+
+    <p>
+      あなたのかばんはどれですか。<br>
+      Which (one of these bags) is you bag?
+    </p>
+
+    <h3> この・その・あの</h3>
+
+    <p>
+      These three Japanese demonstrative adjectives modify nouns that follow after them. So the formats are always この +
+      Noun, その + Noun and あの + Noun. They are used to identify objects in a similar way.
+
+    </p>
+
+    <h3>
+      この + Noun refers to an object or person near to the speaker <br>
+      その + Noun refers to an object or person near to the listener <br>
+      あの + Noun refers to an object or person far from both the speaker and the listener
+    </h3>
+
+    <p>
+      Using the same example, the speaker will point to a bag in front of him and say:
+
+    </p>
+
+    <p>
+      このかばんはわたしのです。<br>
+      This bag is mine.
+    </p>
+    <p>
+      The speaker will point to a bag in front of the listener and say:
+    </p>
+    <p>
+      そのかばんはあなたのです。<br>
+      That bag is yours.
+    </p>
+    <p>
+      The speaker can then point to a bag far away from both of them and say:
+    </p>
+    <p>
+      あのかばんはジョンさんのです。<br>
+      That bag over there is John's.
+    </p>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+        <img class="max-width-100" src="assets/images/t3-demonstrative-adjective-1.png" alt="Japanese demonstrative adjectives">
+      <span>Japanese demonstrative adjectives</span>
+    </div>
+    <p>
+      Notice that when the same noun is repeated in a sentence, it can be omitted, just like the かばん in the above
+      examples.
+    </p>
+    <p>
+      When both the speaker and the listener are close enough, they can consider themselves as one entity and refer to
+      an
+      object/person near to them as この + Noun . They would also refer to an object/person slightly away from them
+      as その + Noun and an object/person far away from them as あの + Noun.
+    </p>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+        <img class="max-width-100" src="assets/images/t3-demonstrative-adjective-2.png" alt="Japanese demonstrative adjectives">
+      <span> Japanese demonstrative adjectives </span>
+    </div>
+
+    <p>
+      And the associated question word for these demonstrative adjectives is どの. You can use this to ask question
+      to determine certain object/person from within a group:
+    </p>
+
+    <p>
+      わたしのかばんはどのかばんですか。<br>
+      Which one is my bag? / Which one of (these bags) is mine?
+
+    </p>
+
+    <h3>
+      ここ・そこ・あそこ
+    </h3>
+
+    <p>
+      While これ・それ・あれ refer to things, another three demonstrative pronouns ここ・そこ・あそこ refer to places.
+    </p>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+            <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-3.png" alt="Japanese demonstrative pronouns">
+      <span> Japanese demonstrative pronouns </span>
+    </div>
+    <h3>
+      ここ refers to the place where the speaker is <br>
+      そこ points to the place where the listener is <br>
+      あそこ indicates the place which is far from both the speaker and the listener
+    </h3>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-4.png" alt="Japanese demonstrative pronouns">
+      <span> Japanese demonstrative pronouns</span>
+    </div>
+
+    <p> When the speaker regards the
+      There is an associated question word どれ for these demonstrative pronouns. You can use this to ask question
+      when you want to determine certain object from within a group of similar objects.
+
+    </p>
+
+    <p> あなたのかばんはどれですか。 listener as sharing his territory, the place where they both are is designated by the
+      word ここ.
+    </p>
+    <p>
+
+      Under this situation, そこ designates the place a slight distance away from them, and あそこ designates an
+      even more distant location.
+    </p>
+    <p>
+      The associated question word for this group is どこ. You can use this to ask question to determine where a
+      place is located:
+    </p>
+    <p>
+      Question: トイレはどこですか。<br>
+      Question: Where is the toilet?<br><br>
+
+      Answer: あそこです。<br>
+      Answer: It's over there.
+    </p>
+
+    <p>
+      Another three pronouns which are more polite than ここ・そこ・あそこ are こちら・そちら・あちら.
+
+    </p>
+
+    <p>
+      These three not only refer to places; they can also be used to point someone in a
+      particular direction. The associated question word is どちら.
+
+    </p>
+
+    <h3>Summary</h3>
+
+    <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
+      <img class="max-width-100" src="assets/images/demonstrative-pronoun_table.jpg" alt="Japanese demonstrative pronouns">
+   </div>
+  </div>
+</div>
