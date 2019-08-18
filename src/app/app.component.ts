@@ -7,15 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'jap-grammar';
 
   constructor(private route:Router) {
 
   }
 
-  ngOnInit() {
-    this.route.navigateByUrl('/particle');
-      
-  }
+  ngOnInit() {}
 
 }

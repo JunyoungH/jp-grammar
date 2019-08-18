@@ -1,1 +1,570 @@
-<p>adjective works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" [@fadeIn]>
+
+  <h1>形容詞【けい・よう・し】・形容動詞【けい・よう・どう・し】</h1>
+  <h2>Properties of Adjectives</h2>
+
+  <p>
+    Now that we can connect two nouns together in various ways using particles, we want to describe our
+    nouns with adjectives. An adjective can directly modify a noun that immediately follows it. It can also be
+    connected in the same way we did with nouns using particles. <strong>All adjectives fall under two categories:
+      adjectives end with 「い」 and adjectives end widh 「だ」. </strong>
+  </p>
+
+  <div fxLayout="row wrap" fxLayoutAlign="center center" class="sticky background-white width-100">
+    <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{0 == contentShow? 'primary': ''}}"
+      (click)="selectContent(0)">形容詞【けい・よう・し】</button>
+
+    <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{1 == contentShow? 'primary': ''}}"
+      (click)="selectContent(1)">形容動詞【けい・よう・どう・し】</button>
+  </div>
+
+  <div *ngIf="contentShow == 0" [@fadeIn]>
+    <h2>The 形容詞【けい・よう・し】</h2>
+    <p>
+      All 形容詞【けい・よう・し】 always end in the Hiragana character: 「い」.
+      Unlike 形容動詞【けい・よう・どう・し】, you do not need to add 「な」 to directly modify a noun with an 形容詞【けい・よう・し】.
+    </p>
+
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. あの - that <br>
+      2. 食べ物【た・べ・もの】- food <br>
+      3. 素晴らしい【すば・らしい】 - wonderful <br>
+      4. 高い【たか・い】- high; tall; expensive <br>
+      5. ビル - building <br>
+      6. 値段【ね・だん】- price <br>
+      7. レストラン - restaurant <br>
+      8. あまり・あんまり - not that much <br>
+      9. もっと - much more
+    </p>
+
+    <p>
+      Below are the rules for conjugating 形容詞【けい・よう・し】. Notice that the
+      rule for conjugating to negative past tense is the same as the rulse for the past tense.
+    </p>
+
+    <h3>Conjugation rules for 形容詞【けい・よう・し】</h3>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>高</td>
+          <td>い</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>たか</td>
+          <td>くない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>たか</td>
+          <td>くて</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>たか</td>
+          <td>くても</td>
+          <td>Contrastive</td>
+        </tr>
+
+        <tr>
+          <td>たか</td>
+          <td>かった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>たか</td>
+          <td>かったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>たか</td>
+          <td>ければ</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>美味し</td>
+          <td>い</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>おい・し</td>
+          <td>くない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>おい・し</td>
+          <td>くて</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>おい・し</td>
+          <td>くても</td>
+          <td>Contrastive</td>
+        </tr>
+        <tr>
+
+        <tr>
+          <td>おい・し</td>
+          <td>かった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>おい・し</td>
+          <td>かったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>おい・し</td>
+          <td>ければ</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Examples</h3>
+    <p>
+      1. 高いビル。 <br>
+      Tall building. <br><br>
+      2. 高くないビル。 <br>
+      Not tall building. <br><br>
+      3. 高かったビル。 <br>
+      Building that was tall. <br><br>
+      5. 高くなかったビル。 <br>
+      Building that was not tall. <br>
+      6. 高くて素晴らしいビル <br>
+      Tall and wonderful building. <br><br>
+      7. 高くても素晴らしくないビル <br>
+      Tall but not wonderfule building <br>
+
+    </p>
+
+    <p>
+      In this example, the descriptive clause 「高い」 is directly modifying 「ビル」.
+
+    </p>
+
+    <h3>Examples</h3>
+
+    <p>
+      1. あのビルは高い。 <br>
+      That building is tall. <br><br>
+      2. あのビルは高くない。 <br>
+      That building is not tall. <br><br>
+      3. あのビルは高かった。 <br>
+      That building was tall. <br><br>
+      4. あのビルは高くなかった。 <br>
+      That building was not tall. <br><br>
+      5. あのビルは高くて素晴らしい。 <br>
+      That building is tall and wonderful<br><br>
+      6. あのビルは高くても、あまり素晴らしくない。 <br>
+      That building is tall but not that much wonderful. <br><br>
+      7. あのビルはあまり高くなくても、素晴らい。 <br>
+      That building is not that much tall but wonderful. <br><br>
+      8. あのビルは高かったら、もっと素晴らしい。 <br>
+      If that building is tall, it will be much more wonderful. <br><br>
+      9. あのビルは高ければ、もっと素晴らしい。 <br>
+      If that building is tall, it will be much more wonderful. <br>
+
+    </p>
+
+    <p>
+      In this example, the descriptive clause 「高い」 describes about「ビル」.
+    </p>
+
+    <h3>An annoying exception</h3>
+    <h3>Vocabulary</h3>
+    1. 値段【ね・だん】- price <br>
+    4. 彼【かれ】- he; boyfriend <br> <br>
+    5. 良い【い・い / よ・い】 - good <br> <br>
+    5. 格好いい【かっ・こう・いい】 - cool; handsome <br>
+
+    <p>
+      There is one 形容詞【けい・よう・し】 meaning "good" that acts slightly differently from all other 形容詞【けい・よう・し】. This is
+      a classic case of how learning Japanese is harder for beginners because the most common and useful
+      words also have the most exceptions. The word for "good" was originally 「よい (良い)」 . However,
+      with time, it soon became 「いい」. When it is written in Kanji, it is usually read as 「よい」 so 「いい」
+      is almost always Hiragana. That's all fine and good. Unfortunately, all the conjugations are still derived
+      from 「よい」 and not 「いい」. This is shown in the next table.
+
+    </p>
+
+    <p>
+      Another adjective that acts like this is 「かっこいい」 because it is an abbreviated version of two words
+      merged together: 「格好」 and 「いい」. Since it uses the same 「いい」, you need to use the same
+      conjugations.
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>い</td>
+          <td>い</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>くない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>くて</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>くても</td>
+          <td>Contrastive</td>
+        </tr>
+
+        <tr>
+          <td>よ</td>
+          <td>かった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>かったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>ければ</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>格好い</td>
+          <td>い</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>かっこう・よ</td>
+          <td>くない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>かっこう・よ</td>
+          <td>くて</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>かっこう・よ</td>
+          <td>くても</td>
+          <td>Contrastive</td>
+        </tr>
+        <tr>
+
+        <tr>
+          <td>かっこう・よ</td>
+          <td>かった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>かっこう・よ</td>
+          <td>かったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>かっこう・よ</td>
+          <td>ければ</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>
+      Take care to make all the conjugations from 「よい」 not 「いい」.
+
+    </p>
+    <h3>Examples</h3>
+
+    <p>
+      1. 値段があんまりよくない。 <br>
+      Price isn't very good. <br> <br>
+      2. 彼はかっこよかった! <br>
+      He looked really cool! <br>
+    </p>
+
+    <h3>Vocabulary</h3>
+    <div fxLayout="row wrap" fxLayoutAlign="start start">
+      <div>
+        高い【たか・い】- high, tall, expensive <br>
+        低い【ひく・い】- low, short (height) <br>
+        安い【やす・い】- cheap <br>
+        長い【なが・い】- long <br>
+        短い【みじか・い】- short (time, length) <br>
+        明るい【あかる・い】- bright <br>
+        暗い【くら・い】- dark <br>
+        遠い【とお・い】- far (distance) <br>
+        近い【ちか・い】- close (distance) <br>
+        深い【ふか・い】- deep <br>
+        浅い【あさ・い】- shallow <br>
+        固い【かた・い】- hard, solid <br>
+        柔らかい【やわ・い】- soft <br>
+        寒い【さむ・い】- cold <br>
+        熱い【あつ・い】- hot <br>
+        暖かい【あたたか】- warm <br>
+        良い【い・い / よ・い】- good <br>
+        悪い【わる・い】- bad <br>
+        重い【おも・い】- heavy <br>
+        軽い【かる・い】- light <br>
+        早い【はや・い】- fast <br>
+        遅い【おそ・い】- slow <br>
+        厚い【あつ・い】- thick (width) <br>
+        薄い【うす・い】- thin (width), bland (taste) <br>
+        緩い【ゆる・い】- loose <br>
+      </div>
+
+      <div>
+        辛い【から・い】- spicy <br>
+        酸っぱい【すっ・い】- sour <br>
+        塩っぱい【しょっ・い】- salty <br>
+        甘い【あま・い】- sweat <br>
+        苦い【にが・い】- bitter <br>
+        油濃い【あぶら・こ・い】- oily, greasy <br>
+        香ばしい【こう・い】- aromatic, savory <br>
+        薄い【うす・い】- light (taste), bland (taste) <br>
+        濃い【こい・い】- thick (taste) <br>
+        青い【あお・い】- blue <br>
+        黒い【くろ・い】- black <br>
+        白い【しろ・い】- white <br>
+        赤い【あか・い】- red <br>
+        黄色い【き・いろ・い】- yellow <br>
+        明るい【あか・い】- bright <br>
+        暗い【くら・い】- dark <br>
+        痛い【いた・い】- painful <br>
+        優しい【やさし・い】- kind, frendly <br>
+        気持ち悪い【き・も・ち・わる・い・い】 - feeling good <br>
+        気持ちいい【き・も・ちいい・い】- feeling bad <br>
+        汚い【きたな・い】- dirty <br>
+        賢い【かしこ・い】- smart <br>
+        可笑しい【お・か・しい】 - strange, odd <br>
+        面白い【おも・しろ・い】 - funny <br>
+        楽しい【たの・しい】- jolly <br>
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="contentShow == 1" [@fadeIn]>
+    <h2>The 形容動詞【けい・よう・どう・し】</h2>
+
+    <h3>Vocabulary</h3>
+    <p>
+      1. 人【ひと】- person <br>
+      2. 友達【とも・だち】- friend <br>
+      3. 親切だ【しん・せつ・だ】(na-adj) - kind <br>
+      4. 魚【さかな】- fish <br>
+      5. 好きだ【す・きだ】(na-adj) - likable; desirable <br>
+      6. 肉【にく】- meat <br>
+      7. 野菜【や・さい】- vegetables <br>
+    </p>
+
+    <p>
+      The 形容動詞【けい・よう・どう・し】 is very simple to learn because it acts essentially like a noun. All the conjugation rules
+      for both nouns and 形容動詞【けい・よう・どう・し】 are the same. One main difference is that a 形容動詞【けい・よう・どう・し】 can directly
+      modify a noun following it by sticking 「な」 between the adjective and noun.
+    </p>
+
+    <h3>
+      Examples
+    </h3>
+
+    <p>
+      1. 友達は親切だ。 <br>
+      Friend is kind. <br> <br>
+      2. 友達は親切な人だ。 <br>
+      Friend is kind person.
+    </p>
+
+    <p>
+      As shown by the following examples, the conjugation rules for na-adjectives are the same as nouns.
+      Below are the rules for conjugating 形容動詞【けい・よう・どう・し】.
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>好き</td>
+          <td>だ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>な</td>
+          <td>Modifying</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>ではない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>で</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>でも</td>
+          <td>Contrastive I</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>だが</td>
+          <td>Contrastive II</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>だった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>だったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>す・き</td>
+          <td>なら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>親切</td>
+          <td>だ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>しん・せつ</td>
+          <td>な</td>
+          <td>Modifying</td>
+        </tr>
+        <tr>
+        <tr>
+          <td>しん・せつ</td>
+          <td>ではない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>しん・せつ</td>
+          <td>で</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>しん・せつ</td>
+          <td>でも</td>
+          <td>Contrastive</td>
+        </tr>
+        <tr>
+
+        <tr>
+          <td>しん・せつ</td>
+          <td>だった</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>しん・せつ</td>
+          <td>だったら</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>しん・せつ</td>
+          <td>なら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>
+      Examples
+    </h3>
+
+    <p>
+      1. 彼は親切な人が好きだ <br>
+      He likes kind person<br><br>
+      2. あの人は親切ではない。 <br>
+      That building is not tall. <br><br>
+      3. あの人は好きだった。 <br>
+      That building was tall. <br><br>
+      4. あの人は親切ではなかった。 <br>
+      That building was not tall. <br><br>
+      5. あの人は親切で格好いい。 <br>
+      That building is tall and wonderful<br><br>
+      6. あの人は親切でも、格好よくない。 <br>
+      That building is tall but not that much wonderful. <br><br>
+      7. あの人は好きだが、親切じゃない。 <br>
+      That building is tall but not that much wonderful. <br><br>
+      8. あの人は親切だったら、好きだ <br>
+      That building is not that much tall but wonderful. <br><br>
+      9. あの人は親切なら, 好きだ <br>
+      If that building is tall, it will be much more wonderful. <br><br>
+
+      <h3>Vocabulary</h3>
+      <div fxLayout="row wrap" fxLayoutAlign="start start">
+        <div>
+          綺麗だ【き・れい・だ】- beatiful, pretty <br>
+          不細工だ【ぷ・さい・く・だ】- ugly  <br>
+          立派だ【りっ・ぱ・だ】- slendid, superb, exellent <br>
+          便利だ【べん・り・だ】- convenient, handy <br>
+          不便だ【ふ・べん・だ】- inconvenient <br>
+          上手だ【じょう・ず・だ】- do something well  <br>
+          下手だ【へ・た・だ】- do not something well <br>
+          好きだ【す・きだ】- like, favorite <br>
+          嫌いだ【きら・いだ】- hate <br>
+          静かだ【しず・かだ】- calm, silent <br>
+          賑やかだ【にぎ・やかだ】- crowded, bustling  <br>
+          派手だ【は・で・だ】- fancy, glamourous <br>
+          地味だ【じ・み・だ】- common, simple <br>
+          有名だ【ゆう・めい・だ】- famous <br>
+          暇だ【ひま・だ】- free (have free time) <br>
+          楽だ【らく・だ】- easy, comfortable <br>
+          元気だ【げん・き・だ】- healthy <br>
+          利口だ【り・こう・だ】- clever <br>
+          大切だ【たい・せつ・だ】- precious, valuable  <br>
+          大事だ【だい・じ・だ】- important <br>
+          真面目だ【ま・じ・め・だ】- diligent <br>
+          色々だ【いろ・いろ・だ】- various <br>
+          上品だ【じょう・ひん・だ】- luxurious <br>
+          下品だ【げ・ひん・だ】- cheap, cruddy <br>
+        </div>
+        <div>
+          誠実だ【せい・じつ・だ】- diligent <br>
+          丈夫だ【じょう・ぶ・だ】- durable <br>
+          新鮮だ【しん・せん・だ】- fresh <br>
+          自由だ【じ・ゆう・だ】- free <br>
+          自然だ【し・ぜん・だ】- natural <br>
+          素敵だ【す・てき・だ】- gorgeous <br>
+          大変だ【たい・へん・だ】- tough, troublsome <br>
+          駄目だ【だ・め・だ】- unable, no more <br>
+          平気だ【へい・き・だ】- unconcerned  <br>
+          豊だ【ゆたか・だ】- rich, plentiful <br>
+          同じだ【おな・じだ】- same <br>
+          簡単だ【かん・たん・だ】- simple, easy <br>
+          確かだ【たし・かだ】- certain, sure <br>
+          丁寧だ【てい・ねい・だ】- polite <br>
+          変だ【へん・だ】- strange, odd <br>
+          危険だ【き・けん・だ】- dangerous <br>
+          残念だ【ざん・ねん・だ】- feel sorry, sad <br>
+          心配だ【しん・ぱい・だ】- uneasy <br>
+          適当だ【てき・とう・だ】- appropriate <br>
+          熱心だ【ねっ・しん・だ】- enthusiastic <br>
+          複雑だ【ふく・ざつ・だ】- complicated, complex <br>
+          十分だ【じゅう・ぶん・だ】- enough <br>
+          必要だ【ひつ・よう・だ】- necessary <br>
+        </div>
+      </div>
+  </div>
+
+
+</div>

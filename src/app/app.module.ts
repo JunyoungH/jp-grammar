@@ -15,6 +15,7 @@ import {
   MatToolbarModule, 
   MatButtonModule
 } from '@angular/material';
+import { BasicExpressionComponent } from './basic-expression/basic-expression.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {
     AdjectiveComponent,
     VerbComponent,
     SpecialExpressionComponent,
-    AdverbComponent
+    AdverbComponent,
+    BasicExpressionComponent
   ],
   imports: [
     BrowserModule,

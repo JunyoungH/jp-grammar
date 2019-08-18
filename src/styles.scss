@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "uiil";
 
 .mat-toolbar-row, .mat-toolbar-single-row {
     min-height: 64px;
@@ -15,13 +16,45 @@
     }
 }
 
-.sticky {
-    position: sticky;
-    position: -webkit- sticky;
-    top: 0;
-    z-index: 100;
+p {
+    max-width: 900px;
+    word-wrap: break-word;
+    word-spacing: normal;
+    white-space: pre-wrap;
 }
 
-.background-white {
-    background-color: white;
+h2 {
+    text-align: center;
+}
+
+.exception {
+    color: rgb(255, 22, 22);
+}
+
+table tr td {
+    padding-left: 30px;
+}
+
+
+
+.button-group-lg {
+    width: 100%;
+    justify-content: center;
+}
+
+.button-group-sm {
+    width: unset;
+} 
+
+@media (max-width: 740px) {
+    .button-group-sm {
+        width: 100%;
+    } 
+
+    .button-group-lg {
+        width: 100%;
+        justify-content: unset;
+        overflow: auto;
+    }
+    
 }
