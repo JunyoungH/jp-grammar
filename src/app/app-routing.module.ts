@@ -8,7 +8,7 @@ import { VerbComponent } from './verb/verb.component';
 import { SpecialExpressionComponent } from './special-expression/special-expression.component';
 
 const routes: Routes = [
-  {path: '',   redirectTo: '/particle', pathMatch: 'full' },
+  {path: '',   redirectTo: '/basic', pathMatch: 'full' },
   {path: 'basic', component: BasicExpressionComponent},
   {path: 'particle', component: ParticleComponent},
   {path: 'adjective', component: AdjectiveComponent},

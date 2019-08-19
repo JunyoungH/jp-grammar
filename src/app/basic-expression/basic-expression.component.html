@@ -272,81 +272,90 @@
     </p>
 
     <h3>Vocabulary</h3>
-    <p>
-      朝
-      昼
-      夜
-      一昨日
-      昨日
-      今日
-      明日
-      明後日
-      一昨年
-      去年
-      今年
-      来年
-      再来年
-      上
-      下
-      右
-      左
-      真ん中
-      北
-      南
-      西
-      東
-      家
-      部屋
-      電気
-      水
-      氷
-      火
-      皿
-      時計
-      扇風機
-      クーラ
-      パソコン
-      テレビ
-      電子レンジ
-      たんす
-      冷蔵庫
-      椅子
-      机
-      会社
-      病院
-      警察
-      警察官
-      おまわり
-      消防士
-      弁護牛
-      開発者
-      運動
-      趣味
-      特技
-      食べ物
-      ご飯
-      野菜
-      果物
-      林檎
-      葡萄
-      苺
-      車
-      自転車
-      地下鉄
-      電車
-      汽車
-      飛行機
-      船
-      箱
-      袋
-      鞄
-      靴
-      靴下
-      下着
-      上着
-
-
-    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="start start">
+      <div>
+        時間【じ・かん】- time  <br>
+        朝【あさ】- morning <br>
+        昼【ひる】- afternoon <br>
+        夕方【ゆう・がた】- evening <br>
+        夜【よる】- night <br>
+        一昨昨日【さきおととい】- two day before yesterday <br>
+        一昨日【おととい】- a day before yesterday <br>
+        昨日【きのう】- yesterday <br>
+        今日【きょう】- today <br>
+        明日【あした】- tomorrow <br>
+        明後日【あさって】- a day after tomorrow <br>
+        明々後日【しあさって】- two day after tomorrow <br>
+        一昨年【おととし】- a year before last year <br>
+        去年【きょ・ねん】- last year <br>
+        今年【こ・とし】- this year <br>
+        来年【らい・ねん】- next year <br>
+        再来年【さらいねん】- a year after next year <br>
+        前【まえ】- front, before <br>
+        後【あと】- later <br>
+        後ろ【うしろ】- back, behind <br>
+        上【うえ】- up <br>
+        下【した】- down <br>
+        右【みぎ】- right <br>
+        左【ひだり】- left <br>
+        真ん中【ま・ん・なか】- center, middle <br>
+        北【きた】- north <br>
+        南【みなみ】- south <br>
+        西【にし】- west <br>
+        東【ひがし】- east <br>
+        家【いえ】- house, home <br>
+        部屋【へ・や】- room <br>
+        電気【でん・き】- electricity <br>
+        水【みず】- water <br>
+        氷【こおり】- ice <br>
+        火【ひ】- fire <br>
+        皿【さら】- plate <br>
+        時計【と・けい】- watch <br>
+        扇風機【せん・ぷう・き】 - electric fan <br>
+      </div>
+      <div>
+        クーラ - aircon  <br>
+        パソコン - personal computer  <br>
+        テレビ - television  <br>
+        電子レンジ【でん・し・レンジ】- microwave  <br>
+        たんす - wardrove, drawer  <br>
+        冷蔵庫【れい・ぞう・こ】- refrigerator  <br>
+        椅子【い・す】- chair  <br>
+        机【つくえ】- desk  <br>
+        会社【かい・しゃ】- company <br>
+        病院【びょう・いん】- hospital <br>
+        警察【けい・さつ】- police  <br>
+        警察官【けい・さつ・かん】- police man <br>
+        おまわり - police man <br>
+        消防士【しょう・ぼう・し】- fire man <br>
+        弁護牛【べん・ご・し】- lowyer <br>
+        開発者【かい・はつ・しゃ】- developer <br>
+        運動【うん・どう】- exercise <br>
+        趣味【しゅ・み】- hobby <br>
+        特技【とく・ぎ】- talent, skill, speciality <br>
+        食べ物【た・べ・もの】- food <br>
+        ご飯【ご・はん】- rice <br>
+        野菜【や・さい】- vegetable <br>
+        果物【くだ・もの】- fruit <br>
+        林檎【りん・ご】- apple <br>
+        葡萄【ぶ・どう】- grape <br>
+        苺【いちご】- strawberry <br>
+        車【くるま】- car
+        自転車【じ・てん・しゃ】- bicycle <br>
+        地下鉄【ち・か・てつ】- subway <br>
+        電車【でん・しゃ】- mrt <br>
+        汽車【き・しゃ】- train <br>
+        飛行機【ひ・こう・き】- airplane <br>
+        船【ふね】- ship <br>
+        箱【はこ】- box <br>
+        袋【ふくろ】- bag (plastic, paper) <br>
+        鞄【かばん】- bag <br>
+        靴【くつ】- shoes <br>
+        靴下【くつした】- sox <br>
+        下着【したぎ】- underwear <br>
+        上着【うわぎ】- outer <br>
+      </div>
+    </div>
   </div>
 
   <div *ngIf="contentShow == 2" [@fadeIn]>
@@ -422,7 +431,8 @@
     </p>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-2.png" alt=" Japanese demonstrative pronouns">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-2.png"
+        alt=" Japanese demonstrative pronouns">
       <span> Japanese demonstrative pronouns</span>
     </div>
     <p>
@@ -432,7 +442,8 @@
     </p>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-        <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-2.png" alt=" Japanese demonstrative pronouns"><br>
+      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-2.png"
+        alt=" Japanese demonstrative pronouns"><br>
     </div>
     <p>
       There is an associated question word どれ for these demonstrative pronouns. You can use this to ask question
@@ -483,7 +494,8 @@
     </p>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-        <img class="max-width-100" src="assets/images/t3-demonstrative-adjective-1.png" alt="Japanese demonstrative adjectives">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-adjective-1.png"
+        alt="Japanese demonstrative adjectives">
       <span>Japanese demonstrative adjectives</span>
     </div>
     <p>
@@ -498,7 +510,8 @@
     </p>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-        <img class="max-width-100" src="assets/images/t3-demonstrative-adjective-2.png" alt="Japanese demonstrative adjectives">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-adjective-2.png"
+        alt="Japanese demonstrative adjectives">
       <span> Japanese demonstrative adjectives </span>
     </div>
 
@@ -522,7 +535,8 @@
     </p>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-            <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-3.png" alt="Japanese demonstrative pronouns">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-3.png"
+        alt="Japanese demonstrative pronouns">
       <span> Japanese demonstrative pronouns </span>
     </div>
     <h3>
@@ -532,7 +546,8 @@
     </h3>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-4.png" alt="Japanese demonstrative pronouns">
+      <img class="max-width-100" src="assets/images/t3-demonstrative-pronoun-4.png"
+        alt="Japanese demonstrative pronouns">
       <span> Japanese demonstrative pronouns</span>
     </div>
 
@@ -576,7 +591,8 @@
     <h3>Summary</h3>
 
     <div class="max-width-900px" fxLayout="column" fxLayoutAlign="center center">
-      <img class="max-width-100" src="assets/images/demonstrative-pronoun_table.jpg" alt="Japanese demonstrative pronouns">
-   </div>
+      <img class="max-width-100" src="assets/images/demonstrative-pronoun_table.jpg"
+        alt="Japanese demonstrative pronouns">
+    </div>
   </div>
 </div>
