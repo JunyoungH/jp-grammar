@@ -1,1 +1,1357 @@
-<p>verb works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" [@fadeIn]>
+  <h1>動詞【どう・し】</h1>
+  <h2>Properties of verb</h2>
+  <div>
+    <p>
+      We've now learned how to describe nouns in various ways with other nouns and adjectives. This gives
+      us quite a bit of expressive power. However, we still cannot express actions. This is where verbs come
+      in. Verbs, in Japanese, always come at the end of clauses. Since we have not yet learned how to create
+      more than one clause, for now it means that any sentence with a verb must end with the verb. We will
+      now learn the three main categories of verbs, which will allow us to define conjugation rules. Before
+      learning about verbs, there is one important thing to keep in mind.
+    </p>
+
+    <p>
+      <strong>
+        A grammatically complete sentence requires a verb only (including state-of-being).
+      </strong>
+    </p>
+    <p>
+      Or to rephrase, unlike English, the only thing you need to make a grammatically complete sentence is a
+      verb and nothing else! That's why even the simplest, most basic Japanese sentence cannot be translated
+      into English!
+
+    </p>
+    <p>
+
+      A grammatically complete sentence: <br><br>
+      • ⾷べる。<br>
+      Eat. (possible translations include: I eat/she eats/they eat)
+    </p>
+
+    <p>
+      Before we can learn any verb conjugations, we first need to learn how verbs are categorized. With the
+      exception of only two 不規則動詞【ふ・き・そく・どう・し】, all verbs fall into the category of 一段動詞【いち・だん・どう・し】or
+      五段活用動詞【ご・だん・かつ・よう・どう・し】.
+    </p>
+
+  </div>
+
+  <div fxLayout="row" class="button-group-lg sticky background-white">
+    <div fxLayout="row" class="button-group-sm">
+      <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{0 == contentShow? 'primary': ''}}"
+        (click)="selectContent(0)">助動詞【じょ・どう・し】</button>
+      <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{1 == contentShow? 'primary': ''}}"
+        (click)="selectContent(1)">不規則動詞【ふ・き・そく・どう・し】</button>
+
+      <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{2 == contentShow? 'primary': ''}}"
+        (click)="selectContent(2)">一段動詞【いち・だん・どう・し】</button>
+
+      <button mat-flat-button style="margin-top: 10px; margin-bottom: 10px" color="{{3 == contentShow? 'primary': ''}}"
+        (click)="selectContent(3)">五段活用動詞【ご・だん・かつ・よう・どう・し】</button>
+    </div>
+  </div>
+
+  <div *ngIf="contentShow == 0" [@fadeIn]>
+    <h2>助動詞【じょ・どう・し】</h2>
+
+    <h3>Polite Form and Verb Stems （〜です、〜ます）: Not being rude in Japan</h3>
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. 丁寧語【てい・ねい・ご】- polite language <br>
+      2. 尊敬語【そん・けい・ご】- honorific language <br>
+      3. 謙譲語【けん・じょう・ご】- humble language <br>
+      4. はい- yes (polite) <br>
+      5. いいえ- no (polite)
+    </p>
+
+    <p>
+      The Japanese we have learned so far is all well and good if you're 5-years old. Unfortunately, adults
+      are expected to use a politer version of the language (called 丁寧語) when addressing certain people.
+      People you will probably use 丁寧語with are: 1) people of higher social rank, and 2) people you are not
+      familiar with. Deciding when to use which language is pretty much a matter of "feel". However, it is a
+      good idea to stick with one form for each person.
+    </p>
+
+    <p>
+      Later (probably much later), we will learn an even politer version of the language called honorific (尊敬語)
+      and humble (謙譲語) form. It will be more useful than you may think because store clerks, receptionists,
+      and such will speak to you in those forms. But for now, let's concentrate on just 丁寧語, which is the base
+      for 尊敬語 and 謙譲語.
+    </p>
+
+    <p>
+      Fortunately, it is not difficult to change casual speech to polite speech. There may be some slight changes
+      to the vocabulary (for example, "yes" and "no" become 「はい」and 「いいえ」respectively in polite
+      speech), and very colloquial types of sentence endings are not used in polite speech. (We will learn about
+      sentence endings in a later section.) Essentially, the only main difference between polite and casual
+      speech comes at the very end of the sentence. You cannot even tell whether a person is speaking in
+      polite or casual speech until the sentence is finished.
+    </p>
+
+    <h3>The stem of verbs</h3>
+
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. ⾷べる【た・べる】(一段動詞) - to eat <br>
+      2. 泳ぐ【およ・ぐ】(五段活用動詞) - to swim <br>
+      3. する(exception) - to do <br>
+      4. 来る【く・る】(exception) - to come <br>
+      5. 怒る【おこ・る】(五段活用動詞) - to get angry <br>
+      6. 鉄拳【てっ・けん】- fist <br>
+      7. 休み【やす・み】- rest; vacation <br>
+      8. 飲む【の・む】(五段活用動詞) - to drink <br>
+      9. 明⽇【あした】- tomorrow <br>
+      10. 映画【えい・が】- movie <br>
+      11. ⾒る【み・る】(一段動詞) - to see <br>
+      12. ⾏く【い・く】(五段活用動詞) - to go <br>
+      13. 友達【とも・だち】- friend <br>
+      14. 遊ぶ【あそ・ぶ】(五段活用動詞) - to play <br>
+      15. 楽しむ【たの・しむ】(五段活用動詞) - to enjoy <br>
+      16. 出す【だ・す】(五段活用動詞) - to bring out <br>
+      17. ⾛る【はし・る】(五段活用動詞) - to run <br>
+      18. ⾛り出す【はし・り・だ・す】(五段活用動詞) - to break into a run <br>
+      19. 着る【き・る】(一段動詞) - to wear <br>
+      20. 替える【か・える】(一段動詞) - to switch <br>
+      21. 着替える【き・が・える】(一段動詞) - to change (clothes) <br>
+      22. 付ける【つ・ける】(一段動詞) - to attach <br>
+      23. 加える【くわ・える】(一段動詞) - to add <br>
+      24. 付け加える【つ・け・くわ・える】(一段動詞) - to add one thing to another <br>
+      25. ⾔う【い・う】(五段活用動詞) - to say <br>
+      26. ⾔い出す【い・い・だ・す】(五段活用動詞) - to start talking <br>
+    </p>
+
+    <p>
+      In order to conjugate all 五段活用動詞s and 一段動詞s into their respective polite forms, we will first learn about the
+      stem of verbs. This is often called the masu-stem in Japanese textbooks but we will call it just the stem
+      because it is used in many more conjugations than just its masu-form. The stem is really great because
+      it's very easy to produce and is useful in many different types of grammar.
+    </p>
+
+    <div>
+      <p>For more detail, please look through the next chapters</p>
+
+      <a (click)="selectContent(1)">不規則動詞【ふ・き・そく・どう・し】</a> /
+      <a (click)="selectContent(2)">一段動詞【いち・だん・どう・し】</a> /
+      <a (click)="selectContent(3)">五段活用動詞【ご・だん・かつ・よう・どう・し】</a>
+    </div>
+    <p>
+
+      • For 一段動詞: Remove the 「る」<br>
+      Example: ⾷べる => ⾷べ
+    </p>
+
+    <p>
+      • For 一段動詞: Remove the 「る」<br>
+      Example: ⾷べる => ⾷べ
+    </p>
+
+    <p>
+      • For 五段活用動詞: The last vowel sound changes from an / u / vowel sound to an / i / vowel sound. <br>
+      Example: 泳ぐ => 泳ぎ
+    </p>
+
+    <p>
+      • 不規則動詞:
+      1. 「する」becomes 「し」<br>
+      2. 「くる」becomes 「き」
+    </p>
+
+    <h3>Rules for extracting the stem of verbs</h3>
+
+    <p>
+      The stem when used by itself can be a very specialized and limited way of creating nouns from verbs.
+      While the「の」particle allows you to talk about verbs as if they were nouns, the stem actually turns verbs
+      into nouns.
+    </p>
+    <p>
+
+      In fact, in very rare cases, the stem is used more often than the verb itself. For example, the
+      stem of 「怒る」(いかる) is used more often than the verb itself. The movie, "Fists of Fury" is translated
+      as 「怒りの鉄拳」and not 「怒る鉄拳」. In fact, 「怒る」will most likely be read as 「おこる」, a
+      completely different verb with the same meaning and kanji! There are a number of specific nouns (such
+      as 「休み」) that are really verb stems that are used like regular nouns. However, in general we cannot
+      take any verb and make it into a noun.
+    </p>
+    <h3>
+      For example, the following sentence is wrong.
+    </h3>
+    <p>
+      • 飲みをする。<br>
+      (This sentence makes sense but no one talks like this) <br><br>
+
+      • 飲みをする。<br>
+      (This sentence makes sense but no one talks like this)
+    </p>
+
+    <p>
+      However, a useful grammar that works in general for stems of all verbs is using the stem as a target with
+      a motion verb (almost always 「⾏く」and 「来る」in this case). This grammar means, "to go or to
+      come to do [some verb]".
+    </p>
+
+    <h3>Here's an example.</h3>
+
+    <p>
+      1. 明⽇、映画を⾒に⾏く。- Tomorrow, go to see movie. <br>
+      「⾒に」is the stem of 「⾒る」combined with the target particle 「に」.
+    </p>
+    <p>
+      The motion target particle 「へ」sounds like you're literally going or coming to something while the 「に」
+      particle implies that you are going or coming for the purpose of doing something.
+    </p>
+    <p>
+      1. 昨⽇、友達が遊びへきた。<br>
+      Yesterday, friend came to a playing activity. (Sounds a bit strange) <br><br>
+
+      2. 昨⽇、友達が遊びにきた。<br>
+      Yesterday, friend came to play.
+    </p>
+
+    <p>
+      The expression 「楽しみにする」meaning "to look forward to" is formed from grammar similar to this
+      but is a special case and should be considered a set expression.
+    </p>
+
+
+    <p>
+      Other verbs are also sometimes attached to the stem to create new verbs. For example, when 「出す」
+      is attached to the stem of 「⾛る」, which is 「⾛り」, you get 「⾛り出す」meaning "to break out into a
+      run".
+    </p>
+    <p>
+      Other examples include 「切り替える」, which means "to switch over to something else", and 「付
+      け加える」, which means "to add something by attaching it". You can see how the separate meanings
+      of the two verbs are combined to create the new combined verb. For example, 「⾔い出す」means "to
+      start talking", combining the meaning, "to speak" and "to bring out".
+    </p>
+    <p>
+      There are no general rules here, you need to just memorize these combined verbs as separate verbs in their own
+      right.
+    </p>
+    <p>
+      Things that are written in a formal context such as newspaper articles also use the stem as a conjunctive
+      verb. We will come back to this later in the formal expression lesson.
+    </p>
+
+    <h3> Using 「〜ます」to make verbs polite</h3>
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. 明⽇【あした】- tomorrow <br>
+      2. ⼤学【だい・がく】- college <br>
+      3. ⾏く【い・く】(五段活用動詞) - to go <br>
+      4. 先週【せん・しゅう】- last week <br>
+      5. 会う【あ・う】(五段活用動詞) - to meet <br>
+      6. 晩ご飯【ばん・ご・はん】- dinner <br>
+      7. ⾷べる【た・べる】(一段動詞) - to eat <br>
+      8. ⾯⽩い【おも・しろ・い】- interesting <br>
+      9. 映画【えい・が】- movie <br>
+      10. ⾒る【み・る】(一段動詞) - to see <br>
+    </p>
+
+
+    <p>
+      Of course, the reason I introduced the verb stem is to learn how to conjugate verbs into their polite form...
+      the ます-form! The ます-form must always come at the end of a complete sentence and never inside
+      a modifying relative clause. When we learn compound sentences, we will see that each sub-sentence of
+      the compound sentence can end in ます-form as well.
+    </p>
+
+    <p>
+      To conjugate verbs into the ます-form, you attach different conjugations of「ます」to the stem depending
+      on the tense. Here is a chart.
+    </p>
+
+    <h3>A conjugation chart with sample stem 「遊び」</h3>
+
+    <p class="color-violet font-bold">
+      ます => conjugations Stem+ ます <br><br>
+
+      Plain ます => 遊びます<br>
+      Negative ません => 遊びません<br><br>
+
+      Past ました => 遊びました<br>
+      Past-Neg ませんでした => 遊びませんでした<br>
+    </p>
+
+    <h3>Examples</h3>
+
+    <p>
+      1. 明⽇、⼤学に⾏きます。 <br>
+      Tomorrow, go to college. <br><br>
+
+      2. 先週、ボブに会いましたよ。 <br>
+      You know, met Bob last week. <br><br>
+
+      3. 晩ご飯を⾷べませんでしたね。 <br>
+      Didn't eat dinner, huh? <br><br>
+
+      4. ⾯⽩くない映画は⾒ません。 <br>
+      About not interesting movies, do not see (them).
+    </p>
+
+    <h3>Using 「です」for everything else</h3>
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. かわいい - cute <br>
+      2. 静かだ【しず・かだ】 - quiet <br>
+      3. ⼦⽝【こ・いぬ】- puppy <br>
+      4. とても- very <br>
+      5. 好きだ【す・き】- likable; desirable <br>
+      6. 昨⽇【きのう】- yesterday <br>
+      7. 時間【じ・かん】- time <br>
+      8. ある(五段活用動詞) - to exist (inanimate) <br>
+      9. その　- that (abbr of 「それの」) <br>
+      10. 部屋【へ・や】- room <br>
+      11. 先週【せん・しゅう】- last week <br>
+      12. ⾒る【み・る】(一段動詞) - to see <br>
+      13. 映画【えい・が】- movie <br>
+      14. ⾯⽩い【おも・しろ・い】 - interesting <br>
+    </p>
+
+    <p>
+      For any sentence that does not end in a 一段動詞 or 五段活用動詞, the only thing that needs to be done is to add
+      「です」or「でした」. You can also do this for substituted nouns (both 「の」and「ん」) by just treating
+      them like regular nouns. Another important thing to remember is that if there is a declarative 「だ」, it
+      must be removed. In being polite, I guess you can't be so bold as to forwardly declare things the way
+      「だ」does. Just like the masu-form, this must also go at the end of a complete sentence. Here is a chart
+      illustrating the conjugations.
+    </p>
+
+    <h3>形容詞【けい・よう・し】 (だcannot be used)</h3>
+    <p class="color-violet font-bold">
+      Casual => Polite <br><br>
+
+      Plain かわいい => かわいいです <br>
+      Negative かわいくない => かわいくないです <br><br>
+
+      Past かわいかった => かわいかったです<br>
+      Past-Neg かわいくなかった =>かわいくなかったです
+    </p>
+
+    <h3>形容動詞【けい・よう・どう・し】/ 名詞【めい・し】 (might have to remove だ)</h3>
+
+    <p class="color-violet font-bold">
+      Casual => Polite <br><br>
+
+      Plain 静かだ => 静かです <br>
+      Negative 静かじゃない => 静かじゃないです<br><br>
+
+      Past 静かだった => 静かでした <br>
+      Past-Neg 静かではなかった => 静かではなかったです
+    </p>
+
+    <p>
+      Notice in the case of 形容動詞【けい・よう・どう・し】/ 名詞【めい・し】only, the past tense becomes 「でした」. A very common
+      mistake is to do the same for 形容詞【けい・よう・し】. Remember 「かわいいでした」is wrong!
+    </p>
+
+    <h3>Examples</h3>
+
+    <p>
+      1. ⼦⽝はとても好きです。<br>
+      About puppies, like very much. (The most natural translation is that someone likes puppies very
+      much but there is not enough context to rule out that the puppies like something very much.)<br><br>
+
+      2. 昨⽇、時間がなかったんです。<br>
+      It was that there was no time yesterday. <br><br>
+
+      3. その部屋はあまり静かじゃないです。<br>
+      That room is not very quiet.<br><br>
+
+      4. 先週に⾒た映画は、とても⾯⽩かったです。<br>
+      Movie saw last week was very interesting.
+    </p>
+
+    <h3>Reality Check</h3>
+    <p>
+      I have heard on a number of occasions that the negative non-past conjugation as given here is not an
+      "officially" correct conjugation. Instead what's considered to be a more "correct" conjugation is to actually
+      replace the 「ないです」part with 「ありません」. The reasoning is that the polite negative form of the
+      verb 「ある」is not 「ないです」but 「ありません」. Therefore, 「かわいくない」actually becomes
+      「かわいくありません」and 「静かではない」becomes 「静かではありません」.
+    </p>
+    <p>
+      The reality of today's Japanese is that what's supposed to be the "official" conjugation sounds rather stiff
+      and formal. In normal everyday conversations, the conjugation presented here will be used almost every
+      time. While you should use the more formal conjugations for written works using the polite form, you'll
+      rarely hear it in actual speech. In conclusion, I recommend studying and becoming familiar with both
+      types of conjugations.
+    </p>
+
+    <h3>A more formal negative conjugation</h3>
+    <p class="color-violet font-bold">
+      Casual => Polite <br> <br>
+
+      Negative かわいくない => かわいくありません <br>
+      Past-Neg かわいくなかった => かわいくありませんでした <br> <br>
+
+      Negative 静かではない => 静かではありません <br>
+      Past-Neg 静かではなかった => 静かではありませんでした
+    </p>
+
+
+    <h3>Examples</h3>
+
+    <p>
+      1. その部屋はあまり静かじゃないですよ。<br>
+      You know, that room is not very quiet.<br><br>
+      2. その部屋はあまり静かじゃありませんよ。<br>
+      You know, that room is not very quiet.
+    </p>
+
+    <h3>「です」is NOT the same as 「だ」</h3>
+    <h3>Vocabulary</h3>
+
+    <p>
+      1. そう- so <br>
+      2. 思う【おも・う】(五段活用動詞) - to think <br>
+      3. はい- yes (polite) <br>
+      4. 答える【こた・える】(一段動詞) - to answer <br>
+    </p>
+
+    <p>
+      Many of you who have taken Japanese classes have probably been taught that 「です」is the polite
+      version of 「だ」. However, I want to point some several key differences here and the reasons why
+      they are in fact completely different things. It is impossible to fully explain the reasons why they are
+      fundamentally different without discussing grammar that have yet to be covered so I would like to target
+      this toward those who have already started learning Japanese and have been incorrectly misinformed
+      that 「だ」is the casual version of 「です」. For the rest of you new to this, you can easily skip this part.
+      I'm sure most of you have learned the expression 「そう」by now. Now, there are four ways to make a
+      complete sentence using the state-of-being with 「そう」to produce a sentence that says, "That is so."
+      Different ways to say, "That is so."
+    </p>
+
+    <p>
+      1. そう。<br>
+      2. そうだ。<br>
+      3. そうです。<br>
+      4. そうでございます。<br>
+    </p>
+
+    <p>
+      The first 「そう」is the implied state-of-being and 「そうだ」is the declarative. As I've stated before,
+      the non-assuming soft spoken 「そう」is often used by females while the more confident 「そうだ」is
+      often used by males.
+    </p>
+
+    <p>
+      「そうです」is the polite version of 「そう」, created by attaching 「です」to the noun. 「そうです」
+      is not the polite version of 「そうだ」where the 「だ」is replaced by 「です」and I'll explain why.
+      Perhaps we wanted to make that sentence into a question instead to ask, "Is that so?" There are several
+      ways to do this but some possibilities are given in the following. (This grammar is covered in a later
+      section.)
+    </p>
+
+    <h3>Different ways to ask, "Is that so?"</h3>
+
+    <p>
+      1. そう？ <br>
+      2. そうか？ <br>
+      3. そうですか？
+    </p>
+
+    <p>
+      As I've explained before, the 「だ」is used to declare what one believes to be a fact. Therefore, 「そう
+      だか？」is not a valid way to ask a question because it is declaring a fact and asking a question at the
+      same time. But the fact that 「そうですか」is a valid question shows that 「です」and 「だ」are
+      essentially different. 「そうです」, in showing respect and humbleness, is not as assertive and is merely
+      the polite version of 「そう」.
+    </p>
+
+    <p>
+      Besides the difference in nuance between 「だ」and 「です」, another key difference is that 「だ」is
+      used in many different types of grammar to delineate a relative clause. 「です」, on the other hand, is
+      only used at the end of a sentence to designate a polite state-of-being. For instance, consider the two
+      following sentences. (This grammar is covered in a later section.)
+    </p>
+
+    <p>
+      • そうだと思います <br>
+      I think that is so. <br> <br>
+
+      • そうですと思います <br>
+      (Incorrect sentence)
+    </p>
+
+    <p>
+      「そうだと思います」is valid while 「そうですと思います」is not because 「です」can only go at the
+      end of the sentence. 「です」can only be in a relative clause when it is a direct quote of what someone
+      said such as the following.
+    </p>
+
+    <p>
+
+      • 「はい、そうです」と答えた。 <br><br>
+      In conclusion, replacing「です」with「だ」, thinking one is the polite equivalent of the other or vice-versa
+      will potentially result in grammatically incorrect sentences. It is best to think of them as totally separate
+      things (because they are).
+
+    </p>
+
+  </div>
+
+  <div *ngIf="contentShow == 1" [@fadeIn]>
+    <h2>不規則動詞【ふ・き・そく・どう・し】</h2>
+    <p>
+      Every language has things that are exceptions to the rule. For the most part, Japanese is very good at obeying its
+      own rules.
+      However, there are a few verbs that break the rules entirely –　不規則動詞【ふ・き・そく・どう・し】.
+      There are only two 不規則動詞【ふ・き・そく・どう・し】:
+    </p>
+
+    <h2>
+      来る【くる】：come ・ する：do
+    </h2>
+    <p>
+      These verbs just don’t fit in with the rest of the standard rules of the language and make it more difficult for
+      everyone to learn it.
+    </p>
+
+    <p>
+      Below are the rules for conjugating 不規則動詞【ふ・き・そく・どう・し】
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>く</td>
+          <td>る</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>き</td>
+          <td>ます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>こ</td>
+          <td>ない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>こ</td>
+          <td>よう</td>
+          <td>inducement</td>
+        </tr>
+        <tr>
+          <td>こ</td>
+          <td>い</td>
+          <td>Imperative</td>
+        </tr>
+
+        <tr>
+          <td>こ</td>
+          <td>られる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>き</td>
+          <td>た</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>き</td>
+          <td>て</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>く</td>
+          <td>れば</td>
+          <td>Predictive I</td>
+        </tr> 　　
+        <tr>
+          <td>き</td>
+          <td>たら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>す</td>
+          <td>る</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>ます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>ない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>よう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>し</td>
+          <td>ろ</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>きる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>た</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>て</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>す</td>
+          <td>れば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>たら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Vocabulary</h3>
+    <p>
+
+    </p>
+
+    <h3>Example</h3>
+    <p>
+
+    </p>
+
+  </div>
+
+  <div *ngIf="contentShow == 2" [@fadeIn]>
+    <h2>一段動詞【いち・だん・どう・し】</h2>
+    <p>
+      All 一段動詞【いち・だん・どう・し】end in 「る」while 五段活用動詞【ご・だん・かつ・よう・どう・し】can end in a number of う-vowel sounds including 「る」.
+      Therefore, if a verb does not end in 「る」, it will always be an 五段活用動詞【ご・だん・かつ・よう・どう・し】.
+    </p>
+
+    <p>
+      For verbs ending in 「る」, if the vowel sound preceding the 「る」is an /a/, /u/ or /o/ vowel sound, it will always be
+      an 五段活用動詞【ご・だん・かつ・よう・どう・し】. <br>
+      <strong> Otherwise, the preceding sound is an /i/ or /e/ vowel sound, it will be a 一段動詞【いち・だん・どう・し】 in most cases.
+      </strong>
+    </p>
+
+    <p>
+      Below are the rules for conjugating 一段動詞【いち・だん・どう・し】
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>食べ</td>
+          <td>る</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>ます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>ない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>よう</td>
+          <td>inducement</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>ろ</td>
+          <td>Imperative</td>
+        </tr>
+
+        <tr>
+          <td>たべ</td>
+          <td>られる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>た</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>て</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>れば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>たべ</td>
+          <td>たら</td>
+          <td>Predictive II</td>
+        </tr> 　　
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>出</td>
+          <td>る</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>ます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>ない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>よう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>で</td>
+          <td>ろ</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>られる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>た</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>て</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>れば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>で</td>
+          <td>たら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Vocabulary</h3>
+    <p>
+
+    </p>
+
+    <h3>Example</h3>
+    <p>
+
+    </p>
+
+  </div>
+
+  <div *ngIf="contentShow == 3" [@fadeIn]>
+    <h2>五段活用動詞【ご・だん・かつ・よう・どう・し】</h2>
+
+    <p>
+      All 一段動詞【いち・だん・どう・し】end in 「る」while 五段活用動詞【ご・だん・かつ・よう・どう・し】can end in a number of う-vowel sounds including 「る」.
+      Therefore, if a verb does not end in 「る」, it will always be an 五段活用動詞【ご・だん・かつ・よう・どう・し】.
+    </p>
+
+    <p>
+      <strong> For verbs ending in 「る」, if the vowel sound preceding the 「る」is an /a/, /u/ or /o/ vowel sound, it will
+        always be an 五段活用動詞【ご・だん・かつ・よう・どう・し】. </strong> <br>
+      Otherwise, the preceding sound is an /i/ or /e/ vowel sound, it will be a 一段動詞【いち・だん・どう・し】 in most cases.
+    </p>
+
+    <p>
+      五段活用動詞【ご・だん・かつ・よう・どう・し】can separte into the 4 differenct groups and each group has the same conjugating rule.
+    </p>
+
+    <h3>Group う・つ・る : verbs ending in う・つ・る</h3>
+
+    <p>
+      Below are the rules for conjugating Group う・つ・る
+
+    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>買う</td>
+          <td>う</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>います</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>わない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>おう</td>
+          <td>inducement</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>え</td>
+          <td>Imperative</td>
+        </tr>
+
+        <tr>
+          <td>か</td>
+          <td>える</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>った</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>って</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>えば</td>
+          <td>Predictive I</td>
+        </tr> 　
+        <tr>
+          <td>か</td>
+          <td>ったら</td>
+          <td>Predictive II</td>
+        </tr> 　
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>勝</td>
+          <td>つ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>ちます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>たない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>とう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>か</td>
+          <td>て</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>ってる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>った</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>って</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>てば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>か</td>
+          <td>ったら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>帰</td>
+          <td>る</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>ります</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>らない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>ろう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>かえ</td>
+          <td>れ</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>れる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>った</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>って</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>れば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>かえ</td>
+          <td>ったら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Vocabulary</h3>
+    <p>
+
+    </p>
+
+    <h3>Example</h3>
+    <p>
+
+    </p>
+
+    <h3>Group む・ぶ・ぬ : verbs ending in む・ぶ・ぬ</h3>
+
+    <p>
+      Below are the rules for conjugating Group む・ぶ・ぬ
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>飲</td>
+          <td>む</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>みます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>まない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>もう</td>
+          <td>inducement</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>め</td>
+          <td>Imperative</td>
+        </tr>
+
+        <tr>
+          <td>の</td>
+          <td>める</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>んだ</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>んで</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>めば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>の</td>
+          <td>んだら</td>
+          <td>Predictive II</td>
+        </tr> 　　
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>呼</td>
+          <td>ぶ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>びます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>ばない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>ぼう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>よ</td>
+          <td>んで</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>んだら</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>んだ</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>んで</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>べば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>よ</td>
+          <td>んだら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>死</td>
+          <td>ぬ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>にます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>なない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>のう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>し</td>
+          <td>ね</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>ねる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>んだ</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>んで</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>ねば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>し</td>
+          <td>んだら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Vocabulary</h3>
+    <p>
+
+    </p>
+
+    <h3>Example</h3>
+    <p>
+
+    </p>
+
+    <h3> Group　く・ぐ : verbs ending in く・ぐ</h3>
+
+    <p>
+      Below are the rules for conjugating Group く・ぐ
+    </p>
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>行</td>
+          <td>く</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>きます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>かない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>こう</td>
+          <td>inducement</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>け</td>
+          <td>Imperative</td>
+        </tr>
+
+        <tr>
+          <td>い</td>
+          <td>ける</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>った</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>って</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>けば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>い</td>
+          <td>ったら</td>
+          <td>Predictive II</td>
+        </tr> 　　
+      </table>
+
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>泳</td>
+          <td>ぐ</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>ぎます</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>がない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>ごう</td>
+          <td>inducement</td>
+        </tr>
+
+        <tr>
+          <td>およ</td>
+          <td>いで</td>
+          <td>Imperative</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>いだら</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>いだ</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>いで</td>
+          <td>Connective</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>げば</td>
+          <td>Predictive I</td>
+        </tr>
+        <tr>
+          <td>およ</td>
+          <td>いだら</td>
+          <td>Predictive II</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Vocabulary</h3>
+    <p>
+
+    </p>
+
+    <h3>Example</h3>
+    <p>
+
+    </p>
+
+    <h3>Group す : verbs ending in す</h3>
+    <p>
+      Below are the rules for conjugating Group す
+    </p>
+
+    <div fxLayout="row wrap" fxLayoutAlign="center center" class="flex-start-lg width-100 background-light-purple">
+      <table class="background-light-purple">
+        <tr class="font-bold">
+          <td>回</td>
+          <td>す</td>
+          <td>Base</td>
+        </tr>
+        <tr>
+          <td>まわ</td>
+          <td>します</td>
+          <td>Polite Form</td>
+        </tr>
+        <tr>
+          <td>まわ</td>
+          <td>さない</td>
+          <td>Negative</td>
+        </tr>
+        <tr>
+          <td>まわ</td>
+          <td>そう</td>
+          <td>inducement</td>
+        </tr>
+        <tr>
+          <td>まわ</td>
+          <td>せ</td>
+          <td>Imperative</td>
+        </tr>
+
+        <tr>
+          <td>まわ</td>
+          <td>せる</td>
+          <td>Possibility</td>
+        </tr>
+        <tr>
+          <td>まわ</td>
+          <td>した</td>
+          <td>Past-tense</td>
+        </tr>
+        <tr>
+          <td>まわ</td>
+          <td>して</td>
+          <td>Connective</td>
+        </tr>
+        　 <tr>
+          <td>まわ</td>
+          <td>せば</td>
+          <td>Predictive I</td>
+        </tr> 　
+        <tr>
+          <td>まわ</td>
+          <td>したら</td>
+          <td>Predictive II</td>
+        </tr> 　
+      </table>
+    </div>
+
+    <h3>Vocabulary</h3>
+    <p>
+
+    </p>
+
+    <h3>Example</h3>
+    <p>
+
+    </p>
+
+
+  </div>
+</div>
