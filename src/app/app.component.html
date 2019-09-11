@@ -9,4 +9,24 @@
 
 </mat-toolbar>
 
+<div>
+    <button mat-button (click)="openLetterSheet(0)">ひらがな・Hiragana</button> / 
+    <button mat-button (click)="openLetterSheet(1)">カタカナ・Katakana</button>
+
+</div>
+
+<ng-template #letteSheetComponent>
+  <mat-tab-group [dynamicHeight]="true" [selectedIndex]="letterType">
+    <mat-tab label="ひらがな">
+      <div class="letter-img" style="background-image: url(assets/images/hiragana3.gif)">
+      </div>      
+    </mat-tab>
+    <mat-tab label="カタカナ">
+      <div class="letter-img" style="background-image: url(assets/images/katakana3.gif)">
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</ng-template>
+
+
 <router-outlet></router-outlet>

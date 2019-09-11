@@ -9,13 +9,15 @@ import { VerbComponent } from './verb/verb.component';
 import { SpecialExpressionComponent } from './special-expression/special-expression.component';
 import { AdverbComponent } from './adverb/adverb.component';
 import { ParticleComponent } from './particle/particle.component';
+import { BasicExpressionComponent } from './basic-expression/basic-expression.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatToolbarModule, 
-  MatButtonModule
+  MatButtonModule,
+  MatDialogModule,
+  MatTabsModule
 } from '@angular/material';
-import { BasicExpressionComponent } from './basic-expression/basic-expression.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { BasicExpressionComponent } from './basic-expression/basic-expression.co
     AppRoutingModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
