@@ -16,6 +16,9 @@
 </div>
 
 <ng-template #letteSheetComponent>
+  <button mat-icon-button color="primary" class="closeButton" (click)="onCloseDialog()">
+    <mat-icon>close</mat-icon>
+  </button>
   <mat-tab-group [dynamicHeight]="true" [selectedIndex]="letterType">
     <mat-tab label="ひらがな">
       <div class="letter-img" style="background-image: url(assets/images/hiragana3.gif)">

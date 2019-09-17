@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "uiil";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons&display=block";
 
 .mat-toolbar-row, .mat-toolbar-single-row {
     min-height: 64px;
@@ -45,6 +46,10 @@ table tr td {
 .button-group-sm {
     width: unset;
 } 
+
+.mat-dialog-container {
+    position: relative;
+}
 
 @media (max-width: 740px) {
     .button-group-sm {

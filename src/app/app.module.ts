@@ -16,7 +16,8 @@ import {
   MatToolbarModule, 
   MatButtonModule,
   MatDialogModule,
-  MatTabsModule
+  MatTabsModule,
+  MatIconModule
 } from '@angular/material';
 
 @NgModule({
@@ -37,7 +38,8 @@ import {
     MatToolbarModule,
     MatButtonModule,
     MatDialogModule,
-    MatTabsModule
+    MatTabsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

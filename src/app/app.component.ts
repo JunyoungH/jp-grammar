@@ -21,7 +21,13 @@ export class AppComponent implements OnInit {
 
   public openLetterSheet(type) {
     this.letterType = type;
-    this.matDialog.open(this.letterSheetComponent)
+    this.matDialog.open(this.letterSheetComponent, {
+      autoFocus: false
+    })
   }
 
+  public onCloseDialog() {
+    this.matDialog.closeAll();
+  }
 }
+  
