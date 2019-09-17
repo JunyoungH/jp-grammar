@@ -51,6 +51,11 @@ table tr td {
     position: relative;
 }
 
+.mat-tab-body-content {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 740px) {
     .button-group-sm {
         width: 100%;
@@ -61,5 +66,12 @@ table tr td {
         justify-content: unset;
         overflow: auto;
     }
+
+    .letter-img {
+        width: 100% !important;
+    }
     
+    .closeButton {
+        display: none !important;
+    }
 }

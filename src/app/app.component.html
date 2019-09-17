@@ -21,12 +21,15 @@
   </button>
   <mat-tab-group [dynamicHeight]="true" [selectedIndex]="letterType">
     <mat-tab label="ひらがな">
-      <div class="letter-img" style="background-image: url(assets/images/hiragana3.gif)">
-      </div>      
+        <!-- <div class="letter-img" style="background-image: url(assets/images/hiragana3.gif)">
+        </div>      --> 
+      <img class="letter-img" src="assets/images/hiragana3.gif" alt="">  
     </mat-tab>
     <mat-tab label="カタカナ">
-      <div class="letter-img" style="background-image: url(assets/images/katakana3.gif)">
-      </div>
+      <!-- <div class="letter-img" style="background-image: url(assets/images/katakana3.gif)">
+      </div> -->
+      <img class="letter-img" src="assets/images/katakana3.gif" alt="">  
+
     </mat-tab>
   </mat-tab-group>
 </ng-template>
