@@ -54,6 +54,7 @@ table tr td {
 .mat-tab-body-content {
     display: flex;
     justify-content: center;
+
 }
 
 @media (max-width: 740px) {
@@ -73,5 +74,13 @@ table tr td {
     
     .closeButton {
         display: none !important;
+    }
+
+    .mat-tab-body-content {
+        display: flex;
+        justify-content: center;
+        display: -webkit-flex;
+        display: -webkit-box;
+        -webkit-justify-content: center;
     }
 }
