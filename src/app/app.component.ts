@@ -9,15 +9,18 @@ import { MatDialog } from '@angular/material';
 })
 export class AppComponent implements OnInit {
   letterType:number = 0;
+  baseUrl:string;
 
   @ViewChild("letteSheetComponent", {static:true})
   letterSheetComponent:TemplateRef<any>;
 
-  constructor(private route:Router, private matDialog:MatDialog) {
+  constructor(private route:Router, private matDialog:MatDialog) {}
 
+  ngOnInit() {
+    let urlSegment =  (window.location.href).split('/');
+    urlSegment.splice(urlSegment.length - 1, 1);
+    this.baseUrl = urlSegment.join('/');
   }
-
-  ngOnInit() {}
 
   public openLetterSheet(type) {
     this.letterType = type;
@@ -28,6 +31,10 @@ export class AppComponent implements OnInit {
 
   public onCloseDialog() {
     this.matDialog.closeAll();
+  }
+
+  public openImage(imgName) {
+    window.open(`${this.baseUrl}/assets/images/${imgName}3.gif`, '_blank');
   }
 }
   
