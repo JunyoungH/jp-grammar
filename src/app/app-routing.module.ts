@@ -6,6 +6,7 @@ import { AdjectiveComponent } from './adjective/adjective.component';
 import { AdverbComponent } from './adverb/adverb.component';
 import { VerbComponent } from './verb/verb.component';
 import { SpecialExpressionComponent } from './special-expression/special-expression.component';
+import { EssentialGrammarComponent } from './essential-grammar/essential-grammar.component';
 
 const routes: Routes = [
   {path: '',   redirectTo: '/basic', pathMatch: 'full' },
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'adjective', component: AdjectiveComponent},
   {path: 'adverb', component: AdverbComponent},
   {path: 'verb', component: VerbComponent},
-  {path: 'special', component: SpecialExpressionComponent}
+  {path: 'essential', component: EssentialGrammarComponent}
+  //{path: 'special', component: SpecialExpressionComponent}
 ];
 
 @NgModule({

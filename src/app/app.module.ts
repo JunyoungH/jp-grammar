@@ -19,6 +19,7 @@ import {
   MatTabsModule,
   MatIconModule
 } from '@angular/material';
+import { EssentialGrammarComponent } from './essential-grammar/essential-grammar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {
     VerbComponent,
     SpecialExpressionComponent,
     AdverbComponent,
-    BasicExpressionComponent
+    BasicExpressionComponent,
+    EssentialGrammarComponent
   ],
   imports: [
     BrowserModule,
