@@ -10,6 +10,7 @@ import { SpecialExpressionComponent } from './special-expression/special-express
 import { AdverbComponent } from './adverb/adverb.component';
 import { ParticleComponent } from './particle/particle.component';
 import { BasicExpressionComponent } from './basic-expression/basic-expression.component';
+import { EssentialGrammarComponent } from './essential-grammar/essential-grammar.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
@@ -19,7 +20,6 @@ import {
   MatTabsModule,
   MatIconModule
 } from '@angular/material';
-import { EssentialGrammarComponent } from './essential-grammar/essential-grammar.component';
 
 @NgModule({
   declarations: [

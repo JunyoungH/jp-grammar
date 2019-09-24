@@ -15,8 +15,8 @@ const routes: Routes = [
   {path: 'adjective', component: AdjectiveComponent},
   {path: 'adverb', component: AdverbComponent},
   {path: 'verb', component: VerbComponent},
-  {path: 'essential', component: EssentialGrammarComponent}
-  //{path: 'special', component: SpecialExpressionComponent}
+  {path: 'essential', component: EssentialGrammarComponent},
+  {path: 'special', component: SpecialExpressionComponent}
 ];
 
 @NgModule({
